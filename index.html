@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!--  CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/icofont.min.css">
+    <link rel="stylesheet" href="plugins/owlCarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="plugins/animation/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="images/xIcon.png" type="image/x-icon" />
+    <title> إفادة للموارد البشرية </title>
+</head>
+
+<body>
+
+    <!-- Header  -->
+    <header>
+        <div class="container-fluid">
+            <!-- Header Navbar  -->
+            <div class="headerNav"> 
+                <!-- Logo  -->
+                <a class="logo" href="index.html">  <img src="images/logo.png" alt="logo" class="img-fluid"> </a>
+                <!-- Nav Menu  -->
+                <div class="navMenu"> 
+                    <ul>
+                        <li> <a href="index.html"> الرئيسية </a></li>
+                        <li> <a href="about.html"> من نحن </a></li>
+                        <li class="dropDown"> 
+                            <a href="#"> خدماتنا </a>
+                            <div class="dropList">
+                                <a href="services.html"> خدماتنا </a>
+                                <a href="#"> خدماتنا </a>
+                                <a href="#"> خدماتنا </a>
+                            </div>
+                        </li>
+                        <li> <a href="offers.html"> عروضنا المميزة </a></li>
+                        <li> <a href="news.html"> الاخبار </a></li>
+                        <li> <a href="branches.html"> فروعنا </a></li>
+                        <li> <a href="faq.html"> الاسئلة الشائعة </a></li>
+                        <li> <a href="contact.html"> اتصل بنا </a></li>
+                    </ul>
+                </div>
+                <!-- User and Language -->
+                <div class="icons">
+                    <!-- User  -->
+                    <div class="user">
+                        <!-- Before Login  -->
+                        <!-- <div class="userHead"> <a href="login.html"> <i class="icofont-user-alt-5"></i> <span> تسجيل الدخول  </span> </a> </div> -->
+                        <!-- After Login  -->
+                        <div class="dropDown"> 
+                            <div class="userHead">  <a href="javascript:void(0)"> <i class="icofont-user-alt-5"></i> <span> حسام هلال  </span>  </a> <i class="icofont-thin-down"></i></div>
+                            <div class="dropList">
+                                <a href="dashboard.html"> <i class="icofont-dashboard"></i> لوحة المعلومات </a>
+                                <a href="account.html"> <i class="icofont-user"></i>  حسابى </a>
+                                <a href="hours-contract.html"> <i class="icofont-attachment"></i> تعاقدات الساعات </a>
+                                <a href="individual-contract.html"> <i class="icofont-list"></i>  عقود الافراد </a>
+                                <a href="individual-orders.html"> <i class="icofont-paperclip"></i> طلبات الافراد </a>
+                                <a href="visits.html"> <i class="icofont-car-alt-1"></i>  زياراتى </a>
+                                <a href="orders.html"> <i class="icofont-document-folder"></i> طلباتى </a>
+                                <a href="support.html"> <i class="icofont-live-support"></i> الدعم الفنى </a>
+                                <a href="index.html"> <i class="icofont-logout"></i> تسجيل الخروج </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Language  -->
+                    <div class="language">
+                        <a href="#"> <i class="icofont-globe"></i>  EN </a>
+                        <!-- <a href="#"> <i class="icofont-globe"></i> عربي </a> -->
+                    </div>
+                    <!-- icons For Mobile -->
+                    <div class="mobileIcons">
+                        <div class="navBtn"> <span></span> <span></span> <span></span>  </div>
+                        <div class="menuOverlay"></div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </header>
+
+    <!-- Header Slider  -->
+    <div class="headerSlider"> 
+        <div class="owl-carousel owl-theme owlHeader">
+            <div class="item" data-img="images/slider-1.jpg">
+                <h2> منازل ( عمالة بالشهر ) </h2>
+                <h3> عمالة منزلية متعددة المهن بعقود متنوعة </h3>
+            </div>
+            <div class="item" data-img="images/slider-2.jpg">
+                <h2> حاضر ( مرافقة منزلية ) </h2>
+                <h3> مرافقات منزليات للعناية بكبار السن </h3>
+            </div>
+            <div class="item" data-img="images/slider-3.jpg">
+                <h2> حاضر ( عمالة بالساعة ) </h2>
+                <h3> عمالة منزلية بالساعة تصل إلى منزلك </h3>
+            </div>
+            <div class="item" data-img="images/slider-4.jpg">
+                <h2> الشركات </h2>
+                <h3> عمالة احترافية متخصصة لجميع قطاعات الأعمال </h3>
+            </div>
+        </div>
+        <div class="sliderButtons">
+            <div class="sliderBtn prevBtn">
+                <svg width="35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="wave" d="M42.9999 0.5C11 200 1 193.5 1 249C1 304.5 14.5 312.5 42.9999 500.5V0.5Z" fill="rgba(255,255,255,.4)"></path>
+                </svg>
+                <div class="SliderBtnCircle"> <i class="icofont-thin-double-right"></i> </div>
+            </div>
+            <div class="sliderBtn nextBtn">
+                <div class="SliderBtnCircle"> <i class="icofont-thin-double-left"></i> </div>
+                <svg width="44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="wave" d="M0.999973 501C32.9999 301.5 42.9999 308 42.9999 252.5C42.9999 197 29.4999 189 1.00002 0.999996L0.999973 501Z" fill="rgba(255,255,255,.4)"></path>
+                </svg>             
+            </div>
+        </div>
+    </div> 
+
+    <!-- Header News  -->
+    <div class="headerNews">
+        <marquee onmouseover="this.stop()" onmouseout="this.start()" behavior="scroll" direction="right">
+            <a href="#"> عمالة منزلية متعددة المهن بعقود متنوعة </a>
+            <a href="#"> عمالة احترافية متخصصة لجميع قطاعات الأعمال </a>
+            <a href="#"> عمالة منزلية بالساعة تصل إلى منزلك </a>
+            <a href="#"> شركة مساهمة مغلقة بدأت منذ عام 2013م و كانت من أولى الشركات المصرح لهم من وزارة العمل والتنمية الاجتماعية في قطاع الاستقدام و إدارة الموارد البشرية في المملكة العربية السعودية  </a>
+        </marquee>
+    </div>
+
+    <!-- Services  -->
+    <div class="services secPadding">
+        <div class="container">
+            <!-- Title  -->
+            <div class="secHead" data-aos="fade-up"> 
+                <h2> خدماتنا </h2> 
+                <p> لاشك أن مشوار الألف ميل يبدأ بخطوة واحدة . نحن في شركة أفادة للموارد البشرية بعون الله تعالي قد بدأنا هذا المشوار </p>
+            </div>
+            <div class="row">
+                <!-- Service  -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up">
+                    <div class="service">
+                        <div class="servicePic"> <img src="images/service-2.jpg" alt="service" class="img-fluid"> </div>
+                        <div class="serviceBody">
+                            <h2> زينة </h2>
+                            <h3> عمالة بالساعة </h3>
+                            <p> عمالة منزلية بالساعة تصل إلى منزلك </p>
+                            <a href="service.html"> <i class="icofont-rounded-left"></i> </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service  -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up">
+                    <div class="service">
+                        <div class="servicePic"> <img src="images/service-3.jpg" alt="service" class="img-fluid"> </div>
+                        <div class="serviceBody">
+                            <h2> منازل </h2>
+                            <h3> شهرية </h3>
+                            <p> عمالة منزلية متعددة المهن بعقود متنوعة</p>
+                            <a href="service.html"> <i class="icofont-rounded-left"></i> </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service  -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up">
+                    <div class="service">
+                        <div class="servicePic"> <img src="images/service-4.jpg" alt="service" class="img-fluid"> </div>
+                        <div class="serviceBody">
+                            <h2> لبية </h2>
+                            <h3> عاملة منزلية </h3>
+                            <p> مرافقات منزليات للعناية بكبار السن </p>
+                            <a href="service.html"> <i class="icofont-rounded-left"></i> </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service  -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up">
+                    <div class="service">
+                        <div class="servicePic"> <img src="images/service-5.jpg" alt="service" class="img-fluid"> </div>
+                        <div class="serviceBody">
+                            <h2> الشركات </h2>
+                            <h3> عمالة بقطاع الشركات </h3>
+                            <p> عمالة احترافية متخصصة لجميع قطاعات الأعمال</p>
+                            <a href="service.html"> <i class="icofont-rounded-left"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Offers  -->
+    <div class="offers secPadding greyBg">
+        <div class="container">
+            <!-- Title  -->
+            <div class="secHead" data-aos="fade-up-in"> 
+                <h2> عروضنا المميزة  </h2> 
+                <p> لاشك أن مشوار الألف ميل يبدأ بخطوة واحدة . نحن في شركة أفادة للموارد البشرية بعون الله تعالي قد بدأنا هذا المشوار </p>
+            </div>
+            <!-- Slider  -->
+            <div class="owl-carousel owl-theme owlOffers" data-aos="fade-up-in">
+                <!-- Item  -->
+                <div class="item">
+                    <a class="offerItem" href="#">
+                        <div class="offerPic"> <img src="images/img-1.jpg" alt="service" class="img-fluid"> </div>
+                        <div class="offerBody">
+                            <h5> عقد لمدة 4 أشهر -  (زيارتين إسبوعياً) </h5>
+                            <p> <label> الزيارات: </label> <span>  32 زيارة </span> </p>
+                            <p> <label> الجنسية: </label> <span> إندونيسيا </span> </p>
+                            <p> <label> الفترة: </label> <span> صباحا </span> </p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Item  -->
+                <div class="item">
+                    <a class="offerItem" href="#">
+                        <div class="offerPic"> <img src="images/about.png" alt="service" class="img-fluid"> </div>
+                        <div class="offerBody">
+                            <h5> عقد لمدة شهر  </h5>
+                            <p> <label> الزيارات: </label> <span>  3 زيارة </span> </p>
+                            <p> <label> الجنسية: </label> <span> إندونيسيا </span> </p>
+                            <p> <label> الفترة: </label> <span> صباحا </span> </p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Item  -->
+                <div class="item">
+                    <a class="offerItem" href="#">
+                        <div class="offerPic"> <img src="images/img-2.png" alt="service" class="img-fluid"> </div>
+                        <div class="offerBody">
+                            <h5> عقد لمدة شهر  </h5>
+                            <p> <label> الزيارات: </label> <span>  3 زيارة </span> </p>
+                            <p> <label> الجنسية: </label> <span> إندونيسيا </span> </p>
+                            <p> <label> الفترة: </label> <span> صباحا </span> </p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Item  -->
+                <div class="item">
+                    <a class="offerItem" href="#">
+                        <div class="offerPic"> <img src="images/blog-2.jpg" alt="service" class="img-fluid"> </div>
+                        <div class="offerBody">
+                            <h5> عقد لمدة 4 أشهر </h5>
+                            <p> <label> الزيارات: </label> <span>  32 زيارة </span> </p>
+                            <p> <label> الجنسية: </label> <span> إندونيسيا </span> </p>
+                            <p> <label> الفترة: </label> <span> صباحا </span> </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About  -->
+    <div class="about secPadding">
+        <div class="container">
+            <div class="row">
+                <!-- Vector   -->
+                <div class="col-12 col-sm-4 col-md-6" data-aos="fade-left">
+                    <img src="images/about-2.png" alt="about" class="img-fluid">
+                </div>
+                <!-- Details  -->
+                <div class="col-12 col-sm-8 col-md-6" data-aos="fade-right">
+                    <h2> من نحن </h2>
+                    <p> لاشك أن مشوار الألف ميل يبدأ بخطوة واحدة ...... نحن في شركة أفادة للموارد البشرية بعون الله تعالي قد بدأنا هذا المشوار ، ووضعنا نصب أعيننا رؤية مستقبلية واضحه وهي تقديم خدمة راقية في مجال توريد العمالة بصورة قائمة على أحدث النظم التي تتلاءم مع ثقافتنا وتقاليدنا وتتماشي مع ما تتطلبه المرحلة القادمة ورؤية 2030.</p>
+                    <p> لاشك أن مشوار الألف ميل يبدأ بخطوة واحدة ...... نحن في شركة أفادة للموارد البشرية بعون الله تعالي قد بدأنا هذا المشوار ، ووضعنا نصب أعيننا رؤية مستقبلية واضحه وهي تقديم خدمة راقية في مجال توريد العمالة بصورة قائمة على أحدث النظم التي تتلاءم مع ثقافتنا وتقاليدنا وتتماشي مع ما تتطلبه المرحلة القادمة ورؤية 2030.</p>
+                    <p> نحن في شركة أفادة للموارد البشرية بعون الله تعالي قد بدأنا هذا المشوار ، ووضعنا نصب أعيننا رؤية مستقبلية واضحه وهي تقديم خدمة راقية في مجال توريد العمالة  </p>
+                    <p> نحن في شركة أفادة للموارد البشرية بعون الله تعالي قد بدأنا هذا المشوار ، ووضعنا نصب أعيننا رؤية مستقبلية واضحه وهي تقديم خدمة راقية في مجال توريد العمالة  </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blogs  -->
+    <div class="blogs secPadding">
+        <div class="container">
+            <!-- Title  -->
+            <div class="secHead" data-aos="fade-up-in"> 
+                <h2> الاخبار </h2> 
+                <p> لاشك أن مشوار الألف ميل يبدأ بخطوة واحدة . نحن في شركة أفادة للموارد البشرية بعون الله تعالي قد بدأنا هذا المشوار </p>
+            </div>
+            <div class="row">
+                <!-- Blog  -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up-in">
+                    <div class="blog">
+                        <div class="blogPic"> 
+                            <img src="images/blog-1.png" alt="blog" class="img-fluid">
+                            <span> 15 Dec </span>
+                        </div>
+                        <div class="blogBody">
+                            <h3> إساد نحو التميز </h3>
+                            <p> تستقبل إساد عام 2018 باستراتيجية عمل تدفعها كالعادة نحو التميز بمشاركة الرئيس التنفيذي ومجموعة من أعضاء مجلس الإدارة وفريق إساد </p>
+                            <a href="#" class="linkBtn"> <span>  المزيد </span> <i class="icofont-stylish-left"></i> </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog  -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up-in">
+                    <div class="blog">
+                        <div class="blogPic"> 
+                            <img src="images/blog-2.jpg" alt="blog" class="img-fluid">
+                            <span> 30 Mar </span>
+                        </div>
+                        <div class="blogBody">
+                            <h3> فعاليات إساد </h3>
+                            <p>  نعمل في إساد على مشاركتكم المناسبات والفعاليات الإجتماعية المبهجة لأنكم تستحقون نعمل في إساد على مشاركتكم المناسبات والفعاليات الإجتماعية المبهجة لأنكم تستحقون نعمل في إساد على مشاركتكم المناسبات والفعاليات الإجتماعية المبهجة لأنكم تستحقون</p>
+                            <a href="#" class="linkBtn"> <span>  المزيد </span> <i class="icofont-stylish-left"></i> </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog  -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up-in">
+                    <div class="blog">
+                        <div class="blogPic"> 
+                            <img src="images/blog-4.jpg" alt="blog" class="img-fluid">
+                            <span> 15 Feb </span>
+                        </div>
+                        <div class="blogBody">
+                            <h3> التكريم الشهري لعاملات حاضر </h3>
+                            <p>  من لا يشكر الناس لا يشكر الله تكريم موظفات حاضر على أداءهم المتميز .  من لا يشكر الناس لا يشكر الله تكريم موظفات حاضر على أداءهم المتميز</p>
+                            <a href="#" class="linkBtn"> <span>  المزيد </span> <i class="icofont-stylish-left"></i> </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog  -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up-in">
+                    <div class="blog">
+                        <div class="blogPic"> 
+                            <img src="images/blog-3.jpg" alt="blog" class="img-fluid">
+                            <span> 5 Dec </span>
+                        </div>
+                        <div class="blogBody">
+                            <h3> هؤلاء يثقون بنا </h3>
+                            <p> الشركات المصرح لهم من وزارة العمل والتنمية الاجتماعية في قطاع الاستقدام و إدارة الموارد البشرية في المملكة العربية السعودية </p>
+                            <a href="#" class="linkBtn"> <span>  المزيد </span> <i class="icofont-stylish-left"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Download App  -->
+    <div class="app secPadding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-7" data-aos="fade-up-in">
+                    <h2> تطبيقنا متاح الان </h2>
+                    <p> حملي و استفيدي من عروضنا الأقوى لخدمة حاضر </p>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-5" data-aos="fade-up-in">
+                    <div class="stores">
+                        <a class="store" href="#"> <img src="images/store-1.png" alt="app" class="img-fluid"> </a>
+                        <a class="store" href="#"> <img src="images/store-2.png" alt="app" class="img-fluid"> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sponsors  -->
+    <div class="sponsors secPadding">
+        <div class="container">
+            <!-- Title  -->
+            <div class="secHead" data-aos="fade-up-in"> 
+                <h2> عملائنا </h2> 
+                <p> لاشك أن مشوار الألف ميل يبدأ بخطوة واحدة . نحن في شركة أفادة للموارد البشرية بعون الله تعالي قد بدأنا هذا المشوار </p>
+            </div>
+            <!-- Slider  -->
+            <div class="owl-carousel owl-theme owlSponsors" data-aos="fade-up-in">
+                <!-- Item  -->
+                <div class="item"> <img src="images/sponsor-1.png" alt="sponsor" class="img-fluid"> </div>
+                <!-- Item  -->
+                <div class="item"> <img src="images/sponsor-2.png" alt="sponsor" class="img-fluid"> </div>
+                <!-- Item  -->
+                <div class="item"> <img src="images/sponsor-3.png" alt="sponsor" class="img-fluid"> </div>
+                <!-- Item  -->
+                <div class="item"> <img src="images/sponsor-4.png" alt="sponsor" class="img-fluid"> </div>
+                <!-- Item  -->
+                <div class="item"> <img src="images/sponsor-5.png" alt="sponsor" class="img-fluid"> </div>
+                <!-- Item  -->
+                <div class="item"> <img src="images/sponsor-6.png" alt="sponsor" class="img-fluid"> </div>
+                <!-- Item  -->
+                <div class="item"> <img src="images/sponsor-7.png" alt="sponsor" class="img-fluid"> </div>
+                <!-- Item  -->
+                <div class="item"> <img src="images/sponsor-8.png" alt="sponsor" class="img-fluid"> </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer  -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <!-- logo and Details -->
+                <div class="col-12 col-sm-4" data-aos="fade-up-in">
+                    <div class="footerInfo">
+                        <a class="footerLogo" href="index.html">  <img src="images/logo.png" alt="logo" class="img-fluid"> </a>
+                        <p> لاشك أن مشوار الألف ميل يبدأ بخطوة واحدة ...... نحن في شركة أفادة للموارد البشرية بعون الله تعالي قد بدأنا هذا المشوار ، ووضعنا نصب أعيننا رؤية مستقبلية واضحه وهي تقديم خدمة راقية المرحلة القادمة ورؤية 2030. </p>
+                    </div>
+                </div>
+                <!-- Links  -->
+                <div class="col-12 col-sm-4" data-aos="fade-up-in">
+                    <div class="footerBlock">
+                        <h3> اهم الروابط </h3>
+                        <ul>
+                            <li> <a href="index.html"> الرئيسية </a></li>
+                            <li> <a href="about.html"> من نحن </a></li>
+                            <li> <a href="news.html"> الاخبار </a></li>
+                            <li> <a href="#"> خدماتنا </a> </li>
+                            <li> <a href="offers.html"> عروضنا المميزة </a></li>
+                            <li> <a href="news.html"> الاخبار </a></li>
+                            <li> <a href="branches.html"> فروعنا </a></li>
+                            <li> <a href="faq.html"> الاسئلة الشائعة </a></li>
+                            <li> <a href="contact.html"> اتصل بنا </a></li>
+                            <li> <a href="about.html"> من نحن </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Social  -->
+                <div class="col-12 col-sm-4" data-aos="fade-up-in">
+                    <div class="footerBlock">
+                        <h3> تابعنا على  </h3>
+                        <div class="social">
+                            <a href="#"> <i class="icofont-facebook"></i> </a>
+                            <a href="#"> <i class="icofont-twitter"></i> </a>
+                            <a href="#"> <i class="icofont-linkedin"></i> </a>
+                            <a href="#"> <i class="icofont-whatsapp"></i> </a>
+                            <a href="#"> <i class="icofont-google-plus"></i> </a>
+                            <a href="#"> <i class="icofont-instagram"></i> </a>
+                            <a href="#"> <i class="icofont-behance"></i> </a>
+                            <a href="#"> <i class="icofont-pinterest"></i> </a>
+                        </div>
+                    </div>
+                    <div class="footerBlock">
+                        <h3> تابعنا على  </h3>
+                        <div class="footerApp">
+                            <a href="#"> <i class="icofont-brand-android-robot"></i> </a>
+                            <a href="#"> <i class="icofont-brand-apple"></i> </a>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </footer> 
+    
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <p> © 2020. إساد لحلول و إدارة الموارد البشرية </p>
+        </div>
+    </div>
+    
+
+    <!-- JS -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="plugins/owlCarousel/owl.carousel.min.js"></script>
+    <script src="plugins/animation/aos.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+</html>
