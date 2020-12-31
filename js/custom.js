@@ -165,6 +165,21 @@
         if($(this).val() === "")
         $(this).parent('.inputField').removeClass('focused');
     });
+
+
+    // Faq 
+    $('.questionHead').on('click' , function() {
+        let question =  $(this).parent('.question');
+        if(question.hasClass('opened')){
+            $('.question').removeClass('opened');
+            $('.answer').slideUp();
+        } else {
+            $('.question').removeClass('opened');
+            $('.answer').slideUp();
+            $(question).addClass('opened');
+            $(question).find('.answer').slideDown();
+        }
+    });
   
 
     // Start Animation 
