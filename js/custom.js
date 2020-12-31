@@ -136,6 +136,19 @@
             }
         }
     });
+
+
+    // Scroll Top
+    let wheight = $(document).height() / 2 - 500;
+    $(window).scroll(function(){
+        if ($(window).scrollTop() > wheight) $('.scrollTop').addClass('show');
+        else $('.scrollTop').removeClass('show');
+    });
+
+    $('.scrollTop').click(function() {
+        $("html, body").animate({ scrollTop: 0 }, 4000);
+        return false;
+    });
   
 
     // Start Animation 
