@@ -137,7 +137,6 @@
         }
     });
 
-
     // Scroll Top
     let wheight = $(document).height() / 2 - 500;
     $(window).scroll(function(){
@@ -148,6 +147,23 @@
     $('.scrollTop').click(function() {
         $("html, body").animate({ scrollTop: 0 }, 4000);
         return false;
+    });
+
+
+    // INPUT FOCUS ANIMATION 
+    $('.inputField .input').focus(function(){
+        $(this).parent('.inputField').addClass('focused');
+    });
+
+    $('.inputField .input').each(function() { 
+        if ($(this).val() != "") {
+            $(this).parent('.inputField').addClass('focused');   
+        }
+    });
+
+    $('.inputField .input').focusout(function(){
+        if($(this).val() === "")
+        $(this).parent('.inputField').removeClass('focused');
     });
   
 
