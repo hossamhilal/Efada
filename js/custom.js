@@ -180,6 +180,43 @@
             $(question).find('.answer').slideDown();
         }
     });
+
+    // Wizzard 
+    var step = $('.step'),
+        stepContent = $('.stepContent'),
+        nextBtn = $('.nextStep');
+
+    // change Wizard Active Tab
+    step.click(function (e) {
+        e.preventDefault();
+        var targetContent = $($(this).attr('href')),
+            stepTab = $(this);
+
+        if (!stepTab.hasClass('disabled')) {
+            step.removeClass('active').addClass('disabled');
+            stepTab.addClass('active').removeClass('disabled');
+            stepContent.removeClass('show');
+            targetContent.addClass('show');
+        }
+    });
+
+    // Move To Wizard Next Step 
+    nextBtn.click(function(){
+        var currentStep = $(this).closest('.stepContent'),
+            currentStepBtn = currentStep.attr('id'),
+            nextStepWizard = $('.step[href="#' + currentStepBtn + '"]').next();
+
+        nextStepWizard.removeClass('disabled').addClass('active').trigger('click');
+    });
+
+    // Move To Wizard Prev Step 
+    prevBtn.click(function(){
+        var currentStep = $(this).closest('.stepContent'),
+            currentStepBtn = currentStep.attr('id'),
+            nextStepWizard = $('.step[href="#' + currentStepBtn + '"]').pre();
+
+        nextStepWizard.removeClass('disabled').addClass('active').trigger('click');
+    });
   
 
     // Start Animation 

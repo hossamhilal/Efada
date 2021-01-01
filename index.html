@@ -34,7 +34,7 @@
                         <li class="dropDown"> 
                             <a href="#"> خدماتنا </a>
                             <div class="dropList">
-                                <a href="services.html"> خدماتنا </a>
+                                <a href="service.html"> خدماتنا </a>
                                 <a href="#"> خدماتنا </a>
                                 <a href="#"> خدماتنا </a>
                             </div>
@@ -523,5 +523,33 @@
     <script src="plugins/animation/aos.js"></script>
     <script src="js/custom.js"></script>
 
+    <script>
+        // COUNTER
+        (function($) {
+            var a = 0;
+            function count () {
+                $('.countNum').each(function () {
+                    let countNum = $(this).text();
+                    $(this).prop('Counter',0).animate({
+                        Counter: $(this).text()
+                    }, {
+                        duration: 7000,
+                        easing: 'swing',
+                        step: function (now) {
+                            $(this).text(Math.ceil(now));
+                        }
+                    });
+                });
+                a = 1;
+            }
+
+            $(window).scroll(function() {
+                var oTop = $('.counts').offset().top - window.innerHeight;
+                if (a == 0 && $(window).scrollTop() > oTop) {
+                    count();
+                }
+            });
+        })(jQuery);
+   </script>
 </body>
 </html>

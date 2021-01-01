@@ -1092,8 +1092,8 @@ header .container-fluid {
 
 .about p::before {
     content: '\eed6';
-    font-family: IcoFont !important;
-    color: var(--secondaryColor);
+    font-family: IcoFont;
+    color: var(--yellow);
 }
 
 @media screen and (max-width:768px) {
@@ -1269,7 +1269,7 @@ header .container-fluid {
 }
 
 .store:hover {
-    background: var(--mainColor);
+    background: var(--secondaryColor);
     transform: translateY(-5px);
 }
 
@@ -1791,8 +1791,8 @@ footer h3::before {
 
 .aboutDetails p::before {
     content: '\eed6';
-    font-family: IcoFont !important;
-    color: var(--secondaryColor);
+    font-family: IcoFont;
+    color: var(--yellow);
 }
 
 .aboutVectors {
@@ -2119,8 +2119,8 @@ footer h3::before {
 
 .BlogPage p::before {
     content: '\eed6';
-    font-family: IcoFont !important;
-    color: var(--secondaryColor);
+    font-family: IcoFont;
+    color: var(--yellow);
 }
 
 .BlogPage .sectitle {
@@ -2191,6 +2191,9 @@ footer h3::before {
 }
 
 .mainBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 200px;
     height: 50px;
     border: 0;
@@ -2577,7 +2580,7 @@ footer h3::before {
     padding: 10px 15px;
 }
 
-.opened .questionHead , 
+.opened .questionHead,
 .questionHead:hover {
     background: var(--yellow);
     color: var(--white);
@@ -2599,8 +2602,8 @@ footer h3::before {
     font-size: 25px;
 }
 
-.opened span ,
-.questionHead:hover + span {
+.opened span,
+.questionHead:hover+span {
     transform: rotate(180deg);
 }
 
@@ -2622,7 +2625,7 @@ footer h3::before {
     .questionHead {
         padding: 5px;
     }
-    
+
     .questionHead h3 {
         font-size: 13px;
         line-height: 1.5;
@@ -2633,11 +2636,11 @@ footer h3::before {
         width: 20px;
         height: 30px;
     }
-    
+
     .answer {
         padding: 10px;
     }
-    
+
     .answer p {
         font-size: 14px;
     }
@@ -2651,6 +2654,7 @@ footer h3::before {
     position: relative;
     padding-top: 40px;
     padding-inline-start: 50px;
+    height: 100%;
 }
 
 .contactMap::before {
@@ -2675,7 +2679,7 @@ footer h3::before {
 .contactMap .map {
     position: relative;
     z-index: 1;
-    height: 370px;
+    height: 100%;
 }
 
 .contactPage .contactForm {
@@ -2744,20 +2748,352 @@ footer h3::before {
     }
 }
 
+/*==========================||---------------------------||========================*/
+/*==========================||          Service          ||========================*/
+/*==========================||---------------------------||========================*/
 
+.serviceVector {
+    margin-bottom: 30px;
+    position: relative;
+    transition: all 1s ease-in-out;
+}
 
-@media screen and (max-width:768px) {}
+.serviceVector:hover {
+    padding: 20px;
+}
+
+.serviceVector::before {
+    content: '';
+    width: calc(100% - 60px);
+    height: calc(100% - 60px);
+    border: 1px solid var(--white);
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    transition: all 1s ease-in-out;
+}
+
+.serviceVector:hover::before {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.serviceVector img {
+    width: 100%;
+}
+
+.servicePage p {
+    margin-bottom: 15px;
+    line-height: 30px;
+}
+
+.servicePage li {
+    color: var(--text);
+    line-height: 30px;
+    position: relative;
+    margin-bottom: 3px;
+}
+
+.servicePage li::before {
+    content: '\eed6';
+    font-family: IcoFont;
+    color: var(--yellow);
+}
+
+.cat {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.catIcon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cat h3 {
+    font-size: 19px;
+    background: rgb(140, 44, 92);
+    background: linear-gradient(130deg, rgba(140, 44, 92, 1) 0%, rgba(45, 57, 144, 1) 100%);
+    background: -webkit-linear-gradient(130deg, rgba(140, 44, 92, 1) 0%, rgba(45, 57, 144, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+
+.cats {
+    padding: 40px 0;
+}
+
+.cats .col-12 {
+    padding: 40px 0 0 0;
+    text-align: center;
+}
+
+.cats .mainBtn {
+    margin: auto;
+}
+
+@media screen and (max-width:768px) {
+    .serviceVector {
+        margin-bottom: 10px;
+    }
+
+    .serviceVector::before {
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+        top: 10px;
+        left: 10px;
+    }
+
+    .servicePage p,
+    .servicePage li {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .catIcon {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .cat h3 {
+        font-size: 14px;
+    }
+}
 
 /*==========================||---------------------------||========================*/
 /*==========================||            En             ||========================*/
 /*==========================||---------------------------||========================*/
 
+.sm-header {
+    min-height: 100px;
+    padding: 30px 0;
+}
 
-@media screen and (max-width:768px) {}
+.steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 50px;
+}
 
-/*==========================||---------------------------||========================*/
-/*==========================||            En             ||========================*/
-/*==========================||---------------------------||========================*/
+.steps::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    right: 0;
+    height: 2px;
+    width: 100%;
+    border-top: var(--border);
+    border-width: 4px;
+}
+
+.steps::after {
+    content: '';
+    position: absolute;
+    top: 50px;
+    right: 0;
+    height: 4px;
+    width: 0;
+    background: var(--purple);
+}
+
+.step {
+    text-align: center;
+    position: relative;
+}
+
+.stepIcon {
+    background: var(--grey);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: var(--border);
+    border-width: 3px;
+}
+
+.step.active .stepIcon {
+    border-color: var(--purple);
+}
+
+.stepIcon img {
+    max-height: 100%;
+    filter: grayscale(100%);
+}
+
+.step.active .stepIcon img {
+    filter: grayscale(0%);
+}
+
+.step h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.step.active h3 {
+    background: rgb(140, 44, 92);
+    background: linear-gradient(130deg, rgba(140, 44, 92, 1) 0%, rgba(45, 57, 144, 1) 100%);
+    background: -webkit-linear-gradient(130deg, rgba(140, 44, 92, 1) 0%, rgba(45, 57, 144, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stepContent {
+    display: none;
+}
+
+.stepContent.show {
+    display: block;
+}
+
+.stepContent > .sectitle {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.stepContent .inputField {
+    margin-bottom: 30px;
+}
+
+.customSelect {
+    height: 50px;
+    padding: 0 15px;
+}
+
+.selectField::after {
+    display: none;
+}
+
+.stepContent .map {
+    height: 350px;
+    margin-bottom: 30px;
+}
+
+.filter {
+    background: var(--grey);
+    padding: 20px;
+}
+
+.filter .row {
+    align-items: center;
+}
+
+.filter .col-12 {
+    padding: 8px 15px;
+}
+
+.filter h4 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.filter .inputField {
+    margin: 0;
+}
+
+.filter .inputField .input {
+    background: var(--white);
+}
+
+.filter .mainBtn {
+    width: 100%;
+    font-size: 15px;
+}
+
+.stepPackages {
+    margin: 40px 0;
+}
+
+.stepPackages .col-12 {
+    padding: 15px;
+}
+
+.stepPackage {
+    border: var(--border);
+}
+
+.stepPackage h4 {
+    background: var(--grey);
+    font-size: 18px;
+    padding: 15px;
+}
+
+.stepPackage ul {
+    line-height: 30px;
+    font-size: 15px;
+    padding: 15px;
+    color: var(--textDark);
+}
+
+.stepPackage b {
+    color: var(--secondaryColor);
+    font-weight: 600;
+}
+
+.radioBox {
+    position: relative;
+    padding-inline-start : 20px;
+}
+
+.radioBox input {
+  position: absolute;
+  top: 0;
+  righ: 0;
+  opacity: 0;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
+
+.radioBox label::before {
+  content:"";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 20px;
+  width: 20px;
+  border: var(--border);
+  border-radius: 50%;
+}
+
+.radioBox input:checked + label::before {
+  border-color: var(--secondaryColor);
+}
+
+/* .radioBox label::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+} */
 
 
 @media screen and (max-width:768px) {}
