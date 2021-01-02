@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/icofont.min.css">
     <link rel="stylesheet" href="plugins/owlCarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="plugins/liScroll/li-scroller.css">
     <link rel="stylesheet" href="plugins/animation/aos.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -30,20 +31,28 @@
                 <div class="navMenu"> 
                     <ul>
                         <li> <a href="index.html"> الرئيسية </a></li>
-                        <li> <a href="about.html"> من نحن </a></li>
                         <li class="dropDown"> 
-                            <a href="#"> خدماتنا </a>
+                            <a href="#">  عن الشركة  </a>
+                            <div class="dropList">
+                                <a href="about.html"> من نحن </a>
+                                <a href="news.html"> الاخبار </a>
+                                <a href="branches.html"> فروعنا </a>
+                                <a href="contact.html"> اتصل بنا </a>
+                            </div>
+                        </li>
+                        <li class="dropDown"> 
+                            <a href="#"> قطاع الافراد </a>
                             <div class="dropList">
                                 <a href="service.html"> خدماتنا </a>
                                 <a href="#"> خدماتنا </a>
                                 <a href="#"> خدماتنا </a>
                             </div>
                         </li>
-                        <li> <a href="offers.html"> عروضنا المميزة </a></li>
-                        <li> <a href="news.html"> الاخبار </a></li>
+                        <li> <a href="offers.html"> قطاع الشركات </a></li>
+                        <li> <a href="offers.html"> عروضنا  </a></li>
                         <li> <a href="branches.html"> فروعنا </a></li>
                         <li> <a href="faq.html"> الاسئلة الشائعة </a></li>
-                        <li> <a href="contact.html"> اتصل بنا </a></li>
+                        <li> <a href="contact.html"> اتصل بنا </a> </li>
                     </ul>
                 </div>
                 <!-- User and Language -->
@@ -83,6 +92,16 @@
         </div>
     </header>
 
+    <!-- Header News  -->
+    <div class="headerNews">
+        <ul>
+            <li> <a href="#"> عمالة منزلية متعددة المهن بعقود متنوعة </a> </li>
+            <li> <a href="#"> عمالة احترافية متخصصة لجميع قطاعات الأعمال </a> </li>
+            <li> <a href="#"> عمالة منزلية بالساعة تصل إلى منزلك </a> </li>
+            <li> <a href="#"> شركة مساهمة مغلقة بدأت منذ عام 2013م و كانت من أولى الشركات المصرح لهم من وزارة العمل والتنمية الاجتماعية في قطاع الاستقدام و إدارة الموارد البشرية في المملكة العربية السعودية  </a> </li>
+        </ul>
+    </div>
+
     <!-- Header Slider  -->
     <div class="headerSlider"> 
         <div class="owl-carousel owl-theme owlHeader">
@@ -105,29 +124,17 @@
         </div>
         <div class="sliderButtons">
             <div class="sliderBtn prevBtn">
-                <svg width="35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="wave" d="M42.9999 0.5C11 200 1 193.5 1 249C1 304.5 14.5 312.5 42.9999 500.5V0.5Z" fill="rgba(255,255,255,.4)"></path>
-                </svg>
+                <svg width="20" height="501" viewBox="0 0 44 501" fill="none" xmlns="http://www.w3.org/2000/svg" class="sc-bsipQr fbzSf"><path class="wave" d="M42.9999 0.5C11 200 1 193.5 1 249C1 304.5 14.5 312.5 42.9999 500.5V0.5Z" fill="rgba(255,255,255,.4)"></path></svg>
                 <div class="SliderBtnCircle"> <i class="icofont-thin-double-right"></i> </div>
             </div>
             <div class="sliderBtn nextBtn">
                 <div class="SliderBtnCircle"> <i class="icofont-thin-double-left"></i> </div>
-                <svg width="44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="20" height="502" viewBox="0 0 44 502" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="wave" d="M0.999973 501C32.9999 301.5 42.9999 308 42.9999 252.5C42.9999 197 29.4999 189 1.00002 0.999996L0.999973 501Z" fill="rgba(255,255,255,.4)"></path>
-                </svg>             
+                </svg>
             </div>
         </div>
     </div> 
-
-    <!-- Header News  -->
-    <div class="headerNews">
-        <marquee onmouseover="this.stop()" onmouseout="this.start()" behavior="scroll" direction="right">
-            <a href="#"> عمالة منزلية متعددة المهن بعقود متنوعة </a>
-            <a href="#"> عمالة احترافية متخصصة لجميع قطاعات الأعمال </a>
-            <a href="#"> عمالة منزلية بالساعة تصل إلى منزلك </a>
-            <a href="#"> شركة مساهمة مغلقة بدأت منذ عام 2013م و كانت من أولى الشركات المصرح لهم من وزارة العمل والتنمية الاجتماعية في قطاع الاستقدام و إدارة الموارد البشرية في المملكة العربية السعودية  </a>
-        </marquee>
-    </div>
 
     <!-- SHare  -->
     <div class="share">
@@ -143,18 +150,18 @@
     </div>
 
     <!-- Services  -->
-    <div class="services secPadding">
+    <div class="services secPadding" data-aos="fade-up">
         <div class="container">
             <!-- Title  -->
-            <div class="secHead" data-aos="fade-up"> 
+            <div class="secHead"> 
                 <h2> خدماتنا </h2> 
                 <p> لاشك أن مشوار الألف ميل يبدأ بخطوة واحدة . نحن في شركة أفادة للموارد البشرية بعون الله تعالي قد بدأنا هذا المشوار </p>
             </div>
             <div class="row">
                 <!-- Service  -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="service">
-                        <div class="servicePic"> <img src="images/service-2.jpg" alt="service" class="img-fluid"> </div>
+                        <a class="servicePic" href="service.html"> <img src="images/service-2.jpg" alt="service" class="img-fluid"> </a>
                         <div class="serviceBody">
                             <h2> زينة </h2>
                             <h3> عمالة بالساعة </h3>
@@ -164,9 +171,9 @@
                     </div>
                 </div>
                 <!-- Service  -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="service">
-                        <div class="servicePic"> <img src="images/service-3.jpg" alt="service" class="img-fluid"> </div>
+                        <a class="servicePic" href="service.html"> <img src="images/service-3.jpg" alt="service" class="img-fluid"> </a>
                         <div class="serviceBody">
                             <h2> منازل </h2>
                             <h3> شهرية </h3>
@@ -176,9 +183,9 @@
                     </div>
                 </div>
                 <!-- Service  -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="service">
-                        <div class="servicePic"> <img src="images/service-4.jpg" alt="service" class="img-fluid"> </div>
+                        <a class="servicePic" href="service.html"> <img src="images/service-4.jpg" alt="service" class="img-fluid"> </a>
                         <div class="serviceBody">
                             <h2> لبية </h2>
                             <h3> عاملة منزلية </h3>
@@ -188,9 +195,9 @@
                     </div>
                 </div>
                 <!-- Service  -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="service">
-                        <div class="servicePic"> <img src="images/service-5.jpg" alt="service" class="img-fluid"> </div>
+                        <a class="servicePic" href="service.html"> <img src="images/service-5.jpg" alt="service" class="img-fluid"> </a>
                         <div class="serviceBody">
                             <h2> الشركات </h2>
                             <h3> عمالة بقطاع الشركات </h3>
@@ -450,7 +457,7 @@
                 <!-- logo and Details -->
                 <div class="col-12 col-sm-4" data-aos="fade-up-in">
                     <div class="footerInfo">
-                        <a class="footerLogo" href="index.html">  <img src="images/logo.png" alt="logo" class="img-fluid"> </a>
+                        <a class="footerLogo" href="index.html">  <img src="images/logoWhite.png" alt="logo" class="img-fluid"> </a>
                         <p> لاشك أن مشوار الألف ميل يبدأ بخطوة واحدة ...... نحن في شركة أفادة للموارد البشرية بعون الله تعالي قد بدأنا هذا المشوار ، ووضعنا نصب أعيننا رؤية مستقبلية واضحه وهي تقديم خدمة راقية المرحلة القادمة ورؤية 2030. </p>
                     </div>
                 </div>
@@ -520,6 +527,7 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="plugins/owlCarousel/owl.carousel.min.js"></script>
+    <script src="plugins/liScroll/li-scroller.js"></script>
     <script src="plugins/animation/aos.js"></script>
     <script src="js/custom.js"></script>
 
@@ -551,5 +559,17 @@
             });
         })(jQuery);
    </script>
+
+   <!-- Marque  -->
+   <script>
+    $(function () {
+        var rtlVal = true ;   
+        $('body').hasClass('en') ? rtlVal = false : rtlVal = true;
+        $('.headerNews ul').liScroll({
+            travelocity: 0.05,
+            rtl: rtlVal
+        });
+    });
+</script>
 </body>
 </html>
