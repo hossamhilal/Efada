@@ -90,6 +90,26 @@ textarea:active {
 header {
     position: relative;
     background: var(--white);
+    transition: all .4s ease-in-out;
+}
+
+.fixedTop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: var(--white);
+    z-index: 99;
+    border-bottom: var(--border);
+}
+
+.fixedTop .logo {
+    max-width: 70px;
+}
+
+.fixedTop .headerNav {
+    padding: 10px 0;
 }
 
 header .container-fluid {
@@ -2640,6 +2660,7 @@ footer h3::before {
     align-items: center;
     justify-content: space-between;
     padding: 10px 15px;
+    cursor: pointer;
 }
 
 .opened .questionHead,
