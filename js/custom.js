@@ -184,7 +184,8 @@
     // Wizzard 
     var step = $('.step'),
         stepContent = $('.stepContent'),
-        nextBtn = $('.nextStep');
+        nextBtn = $('.nextStep'),
+        prevBtn = $('.prevStep');
 
     // change Wizard Active Tab
     step.click(function (e) {
@@ -213,10 +214,63 @@
     prevBtn.click(function(){
         var currentStep = $(this).closest('.stepContent'),
             currentStepBtn = currentStep.attr('id'),
-            nextStepWizard = $('.step[href="#' + currentStepBtn + '"]').pre();
+            prevStepWizard = $('.step[href="#' + currentStepBtn + '"]').prev();
 
-        nextStepWizard.removeClass('disabled').addClass('active').trigger('click');
+        prevStepWizard.removeClass('disabled').addClass('active').trigger('click');
     });
+
+
+
+    // Choose Package
+    $('.choosePackage').change(function(){ 
+        if ( this.checked )  {
+            $('.stepPackage').removeClass('choosed');
+            $(this).parents('.stepPackage').addClass('choosed');
+        }
+        else $(this).parents('.stepPackage').removeClass('choosed');
+    });
+ 
+    $('.stepPackage').on('click' , function() {
+        $('.stepPackage').removeClass('choosed');
+        let radio = $(this).find('.choosePackage');
+        if (!$(radio).prop('checked')){
+            $(radio).prop('checked','checked');
+            $(this).addClass('choosed');
+        }
+    });
+
+    // Choose Worker from Company
+    $('.company').change(function(){ 
+        if ( this.checked )  {
+            $(this).parent('.radioBox').next('.companyBranch').addClass('show');
+        }
+        else  $(this).parent('.radioBox').next('.companyBranch').removeClass('show'); 
+    });
+
+    // Hide Deliver Way If Choose From Company
+    $('.chooseWayBox .company').change(function(){ 
+        if ( this.checked ) $('.onlineWrapper').hide();
+        else  $('.onlineWrapper').show();
+    });
+
+    // Choose Worker Online
+    $('.chooseOnline').change(function(){ 
+        if ( this.checked ) $('.onlineWrapper').show();
+        else $('.onlineWrapper').hide();
+    });
+
+    // Hide Branch If Choose Online 
+    $('.chooseOnline').change(function(){ 
+        if ( this.checked ) $(this).parents('.deliverWrapper').find('.companyBranch').removeClass('show');
+        else $(this).parents('.deliverWrapper').find('.companyBranch').addClass('show');
+    });
+
+
+    
+
+
+    
+
   
 
     // Start Animation 
