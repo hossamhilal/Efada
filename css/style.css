@@ -584,7 +584,7 @@ header .container-fluid {
 
 .headerSlider .owl-nav>* {
     position: absolute;
-    height:250px;
+    height: 250px;
     top: 0;
 }
 
@@ -699,6 +699,7 @@ header .container-fluid {
 }
 
 @media screen and (max-width:768px) {
+
     .headerSlider,
     .headerSlider .item,
     .sliderBtn,
@@ -755,7 +756,7 @@ header .container-fluid {
     height: 45px;
 }
 
-.headerNews a ,
+.headerNews a,
 ul.newsticker_rtl a {
     position: relative;
     display: inline-flex;
@@ -874,8 +875,8 @@ ul.newsticker_rtl a {
     font-size: 15px;
 }
 
-.service:hover h2 , 
-.service:hover h3 , 
+.service:hover h2,
+.service:hover h3,
 .service:hover p {
     color: var(--white);
 }
@@ -2556,13 +2557,13 @@ footer h3::before {
         padding: 10px;
     }
 
-    .inputField ,
+    .inputField,
     .inputField .input {
         font-size: 14px;
         height: 42px;
     }
 
-    .textareaField , 
+    .textareaField,
     .textareaField .input {
         height: 180px;
     }
@@ -3047,7 +3048,11 @@ footer h3::before {
 
 .stepContent>.sectitle {
     font-size: 22px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
+}
+
+.stepContent .formBox {
+    padding: 30px 0;
 }
 
 .stepContent .inputField {
@@ -3189,9 +3194,9 @@ footer h3::before {
 }
 
 .radioBox label::after {
-  content: "";
-  position: absolute;
-  display: none;
+    content: "";
+    position: absolute;
+    display: none;
 }
 
 .radioBox label:after {
@@ -3206,8 +3211,8 @@ footer h3::before {
     transform: rotate(45deg);
 }
 
-.radioBox input:checked + label:after {
-  display: block;
+.radioBox input:checked+label:after {
+    display: block;
 }
 
 .stepPackage .themeDefault {
@@ -3240,7 +3245,7 @@ footer h3::before {
     display: none;
 }
 
-.companyBranch.show{
+.companyBranch.show {
     display: flex;
 }
 
@@ -3278,6 +3283,140 @@ footer h3::before {
     font-size: 14px;
     width: 130px;
     margin-inline-end: 20px;
+}
+
+.contractWrapper {
+    background: var(--grey);
+    border: var(--border);
+    padding: 30px;
+    max-width: calc(100% - 10px);
+    width: 100%;
+    margin: auto;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.contractWrapper::before {
+    content: '';
+    border: var(--border);
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    top: -5px;
+    right: -5px;
+    left: -5px;
+    position: absolute;
+    z-index: -1;
+}
+
+.contract {
+    height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-inline-end: 15px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+.contract::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondaryColor);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--mainColor);
+}
+
+.contractHeader {
+    text-align: end;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.contractBody h2 {
+    font-size: 19px;
+    color: var(--secondaryColor);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contractBody p,
+.contractBody li,
+.contract h4,
+.contractFooter p {
+    font-size: 18px;
+    color: var(--textDark);
+    line-height: 30px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.contract ul {
+    list-style: decimal;
+    list-style-position: inside;
+}
+
+.contract b {
+    font-size: 17px;
+    margin: 0 5px;
+}
+
+.contract h3 {
+    color: var(--secondaryColor);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.contract h4 b {
+    color: var(--secondaryColor);
+}
+
+.contractFlex {
+    display: flex;
+    padding: 15px 0 0 0;
+    flex-wrap: wrap;
+}
+
+.rule {
+    margin-bottom: 20px;
+}
+
+.rule p {
+    padding-inline-start: 30px;
+}
+
+.rule ul {
+    padding-inline-start: 30px;
+}
+
+.rule ul ul {
+    list-style: inside;
+}
+
+.center {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.print .mainBtn {
+    margin: auto;
+    font-size: 16px;
+}
+
+.print {
+    padding: 20px 0 0 0;
+}
+
+.print .mainBtn i {
+    margin-inline-start: 10px;
 }
 
 
@@ -3327,7 +3466,7 @@ footer h3::before {
 }
 
 .flexField .field {
-    width: calc( 50%  - 10px );
+    width: calc(50% - 10px);
 }
 
 .field label {
@@ -3383,15 +3522,15 @@ footer h3::before {
     .loginWrapper {
         padding: 20px;
     }
-    
+
     .login {
         padding: 20px 0 0 0;
     }
-    
+
     .login .sectitle {
         font-size: 17px;
     }
-    
+
     .field label {
         font-size: 13px;
     }
