@@ -259,7 +259,7 @@
     });
 
     // Upload File 
-    function uploadAvatar(input , place , btns) {
+    function uploadFile(input , place , btns) {
         if (input.files && input.files[0]) {
             let reader = new FileReader();
             reader.onload = function(e) {
@@ -277,7 +277,7 @@
     }
     $(document).on('click', '.uploadInput' ,function() {
         $(this).on('change', function(){
-            uploadAvatar(this , $(this).parent().prev('.fileName') , $(this).parent().next('.uploadButtons'));
+            uploadFile(this , $(this).parent().prev('.fileName') , $(this).parent().next('.uploadButtons'));
         })
     });
 
@@ -290,6 +290,14 @@
         }
     });
 
+    // Delete Uploaded File
+    $('.delete').on('click', function() {
+        let parent = $(this).parents('.uploadFile');
+        $('#previewImage').attr('src', '');
+        $(parent).find('.uploadInput').val('');
+        $(parent).find('.fileName').text('');
+        $(parent).find('.uploadButtons').removeClass('show');
+    });
 
     // Change Profile Avatar 
     function uploadAvatar(input , place) {
@@ -310,7 +318,6 @@
         })
     });
 
-
     // Tabs 
     $('.tabsList a').on('click' , function(e){
         e.preventDefault();
@@ -321,9 +328,6 @@
         $('.tabContent').removeClass('show'); 
         $(itemId).addClass('show');
     });
-
-    
-
 
     // Start Animation 
     AOS.init();

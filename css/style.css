@@ -3253,6 +3253,7 @@ footer h3::before {
     border-radius: 3px;
     border-color: var(--text);
     width: 20px;
+    min-width: 20px;
     height: 20px;
     display: inline-block;
     margin-inline-end: 5px;
@@ -3485,11 +3486,6 @@ footer h3::before {
     margin-inline-start: 10px;
 }
 
-.uploadWrapper {
-    display: flex;
-    margin-bottom: 30px;
-}
-
 .uploadFile {
     border: var(--border);
     height: 50px;
@@ -3497,8 +3493,7 @@ footer h3::before {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-inline-end: 10px;
-    width: calc(100% - 200px);
+    margin-bottom: 30px;
 }
 
 .fileName {
@@ -3546,7 +3541,7 @@ footer h3::before {
     background: var(--yellow);
 }
 
-.uploadWrapper i {
+.uploadFile i {
     margin-inline-start: 5px;
     font-size: 22px;
 }
@@ -3642,7 +3637,134 @@ footer h3::before {
     margin: 30px auto 0;
 }
 
-@media screen and (max-width:768px) {}
+@media screen and (max-width:768px) {
+    .steps {
+        flex-wrap: wrap;
+    }
+
+    .stepIcon {
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+
+    .step h3 {
+        font-size: 11px;
+    }
+
+    .step {
+        margin-inline-end: 10px;
+        width: 85px;
+    }
+
+    .steps::before {
+        display: none;
+    }
+
+    .stepContent>.sectitle {
+        font-size: 20px;
+    }
+
+    .stepBtns .mainBtn {
+        height: 40px;
+        width: 115px;
+    }
+
+    .filter .mainBtn {
+        height: 40px;
+    }
+
+    .stepPackages {
+        margin: 15px 0 0 0;
+    }
+
+    .contractWrapper {
+        padding: 10px;
+    }
+
+    .contractHeader {
+        font-size: 13px;
+    }
+
+    .contractBody h2 {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .contractBody p,
+    .contractBody li,
+    .contract h4,
+    .contractFooter p {
+        font-size: 14px;
+        line-height: 25px;
+        margin-bottom: 5px;
+    }
+
+    .contract b {
+        font-size: 14px;
+    }
+
+    .contract h3 {
+        font-size: 15px;
+    }
+
+    .rule p,
+    .rule ul {
+        padding-inline-start: 10px;
+    }
+
+    .contract {
+        height: 400px;
+    }
+
+    .print .mainBtn {
+        font-size: 13px;
+        height: 40px;
+    }
+
+    .checkBox {
+        font-size: 14px;
+    }
+
+    .success img {
+        max-width: 80px;
+    }
+
+    .success h2 {
+        font-size: 22px;
+    }
+
+    .success h3 {
+        font-size: 17px;
+    }
+
+    .success h3 b,
+    .success h3 span {
+        font-size: 22px;
+    }
+
+    .success .mainBtn {
+        height: 40px;
+    }
+
+    .uploadFile span {
+        display: none;
+    }
+    
+    .upload, .uploadButtons>div {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .upload i , .uploadButtons>div i {
+        font-size: 18px;
+        margin: 0;
+    }
+}
 
 @media (min-width:1024px) {
     .modal-dialog {
@@ -4122,7 +4244,7 @@ footer h3::before {
 }
 
 .tabsList a {
-    width: calc( 50% - 5px);
+    width: calc(50% - 5px);
     height: 45px;
     background: var(--grey);
     display: flex;
@@ -4186,11 +4308,11 @@ footer h3::before {
     font-weight: 600;
 }
 
-.commingVisit  h3 {
+.commingVisit h3 {
     color: var(--whatsapp);
 }
 
-.finishedVisit  h3 {
+.finishedVisit h3 {
     color: var(--google);
 }
 
@@ -4446,19 +4568,19 @@ footer h3::before {
     .listBlockBody {
         padding: 12px 8px;
     }
-    
+
     .listBlock p {
         font-size: 13px;
     }
-    
+
     .listBockHead {
         font-size: 16px;
     }
-    
+
     .listBlock .map {
         height: 300px;
     }
-    
+
     .listBlock label {
         margin: 0 3px;
     }
@@ -4472,24 +4594,24 @@ footer h3::before {
         font-size: 13px;
         margin-inline-start: 5px;
     }
-    
+
     .visitsWrapper .col-12 {
         margin-bottom: 15px;
     }
-    
+
     .visit {
         padding: 12px;
     }
-    
+
     .visit .visitIcon {
         font-size: 40px;
         width: 50px;
     }
-    
+
     .visit h3 {
         font-size: 14px;
     }
-    
+
     .visit p {
         font-size: 14px;
         line-height: 25px;
