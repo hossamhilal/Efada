@@ -65,7 +65,7 @@
                             <div class="userHead">  <a href="javascript:void(0)"> <i class="icofont-user-alt-5"></i> <span> حسام هلال  </span>  </a> <i class="icofont-thin-down"></i></div>
                             <div class="dropList">
                                 <a href="dashboard.html"> <i class="icofont-dashboard"></i> لوحة المعلومات </a>
-                                <a href="account.html"> <i class="icofont-user"></i>  حسابى </a>
+                                <a href="profile.html"> <i class="icofont-user"></i>  حسابى </a>
                                 <a href="hours-contract.html"> <i class="icofont-attachment"></i> تعاقدات الساعات </a>
                                 <a href="individual-contract.html"> <i class="icofont-list"></i>  عقود الافراد </a>
                                 <a href="individual-orders.html"> <i class="icofont-paperclip"></i> طلبات الافراد </a>
@@ -681,9 +681,76 @@
                             </div>
                         </div>
                         <div class="stepContent" id="step6"> 
-                            <h2 class="sectitle"> </h2>
+                            <h2 class="sectitle"> رفع المرفقات </h2>
                             <div class="formBox"> 
-
+                                <div class="upladFiles">
+                                    <div class="row">
+                                        <!-- Upload  -->
+                                        <div class="col-12 col-sm-6">
+                                            <div class="uploadWrapper">
+                                                <div class="uploadFile">
+                                                    <div class="fileName"></div>
+                                                    <div class="upload">
+                                                        <input type="file" class="uploadInput" accept="image/*">
+                                                        <label> <i class="icofont-search-folder"></i> تصفح </label>
+                                                    </div>
+                                                    <div class="uploadButtons">
+                                                        <div class="delete"> <i class="icofont-ui-delete"></i> حذف </div>
+                                                        <div class="view"> <i class="icofont-eye-alt"></i>  عرض </div>
+                                                    </div>
+                                                </div>   
+                                            </div>
+                                        </div>
+                                        <!-- Upload  -->
+                                        <div class="col-12 col-sm-6">
+                                            <div class="uploadWrapper">
+                                                <div class="uploadFile">
+                                                    <div class="fileName"></div>
+                                                    <div class="upload">
+                                                        <input type="file" class="uploadInput" accept="image/*">
+                                                        <label> <i class="icofont-search-folder"></i> تصفح </label>
+                                                    </div>
+                                                    <div class="uploadButtons">
+                                                        <div class="delete"> <i class="icofont-ui-delete"></i> حذف </div>
+                                                        <div class="view"> <i class="icofont-eye-alt"></i>  عرض </div>
+                                                    </div>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                        <!-- Upload  -->
+                                        <div class="col-12 col-sm-6">
+                                            <div class="uploadWrapper">
+                                                <div class="uploadFile">
+                                                    <div class="fileName"></div>
+                                                    <div class="upload">
+                                                        <input type="file" class="uploadInput" accept="image/*">
+                                                        <label> <i class="icofont-search-folder"></i> تصفح </label>
+                                                    </div>
+                                                    <div class="uploadButtons">
+                                                        <div class="delete"> <i class="icofont-ui-delete"></i> حذف </div>
+                                                        <div class="view"> <i class="icofont-eye-alt"></i>  عرض </div>
+                                                    </div>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                        <!-- Upload  -->
+                                        <div class="col-12 col-sm-6">
+                                            <div class="uploadWrapper">
+                                                <div class="uploadFile">
+                                                    <div class="fileName"></div>
+                                                    <div class="upload">
+                                                        <input type="file" class="uploadInput" accept="image/*">
+                                                        <label> <i class="icofont-search-folder"></i> تصفح </label>
+                                                    </div>
+                                                    <div class="uploadButtons">
+                                                        <div class="delete"> <i class="icofont-ui-delete"></i> حذف </div>
+                                                        <div class="view"> <i class="icofont-eye-alt"></i>  عرض </div>
+                                                    </div>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="stepBtns"> 
                                 <button class="mainBtn prevStep" type="button"> <span> السابق </span>  </button> 
@@ -691,16 +758,30 @@
                             </div>
                         </div>
                         <div class="stepContent" id="step7"> 
-                            <h2 class="sectitle"> </h2>
+                            <h2 class="sectitle"> الدفع والتمتع بخدماتنا </h2>
                             <div class="formBox"> 
-
-                            </div>
-                            <div class="stepBtns"> 
-                                <button class="mainBtn prevStep" type="button"> <span> السابق </span>  </button> 
-                                <button class="mainBtn nextStep" type="button"> <span> التالي </span>  </button> 
+                                <div class="success">
+                                    <img src="images/success.png" alt="success" class="img-fluid">
+                                    <h4> شكرا لك </h4>
+                                    <h2> تم تسجيل التعاقد بنجاح </h2>
+                                    <h3> رقم العقد <b> HS0107061 </b> </h3>
+                                    <h3> قيمة العقد <span> 138 </span> ريال </h3>
+                                    <a href="" class="mainBtn">  <span>  إدفع أونلاين </span> </a>
+                                </div>
                             </div>
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="view" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="previewPaper">
+                    <img src="" alt="file" class="img-fluid" id="previewImage">
                 </div>
             </div>
         </div>

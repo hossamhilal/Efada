@@ -26,11 +26,11 @@
         $('body').removeClass('no-scroll');
     });
 
+    // Navbar Fixed 
     $(window).scroll(function(){
         if ($(window).scrollTop() > 100) $('header').addClass('fixedTop');
         else $('header').removeClass('fixedTop');
     });
-
 
     // Check if Rtl 
     var rtlVal = true ;   
@@ -85,14 +85,6 @@
         $('.headerSlider').css('background' , 'url('+ ActiveSrc +')');
         $('.headerSlider').css('background-size' , 'cover');
     });
-
-    // owlHeader.on('translate.owl.carousel', function(elem) {
-    //     let current = elem.item.index;
-    //     let currentItem = $(elem.target).find('.owl-item').eq(current).find('.item');
-    //     // $(currentItem).find('h2').attr('data-aos', 'fade-down');
-    //     // $(currentItem).find('h3').attr('data-aos', 'fade-up');
-    // });
-
     
     // Offers Owl
      $('.owlOffers').owlCarousel({
@@ -224,8 +216,6 @@
         prevStepWizard.removeClass('disabled').addClass('active').trigger('click');
     });
 
-
-
     // Choose Package
     $('.choosePackage').change(function(){ 
         if ( this.checked )  {
@@ -246,9 +236,7 @@
 
     // Choose Worker from Company
     $('.company').change(function(){ 
-        if ( this.checked )  {
-            $(this).parent('.radioBox').next('.companyBranch').addClass('show');
-        }
+        if ( this.checked ) $(this).parent('.radioBox').next('.companyBranch').addClass('show');
         else  $(this).parent('.radioBox').next('.companyBranch').removeClass('show'); 
     });
 
@@ -270,20 +258,75 @@
         else $(this).parents('.deliverWrapper').find('.companyBranch').addClass('show');
     });
 
+    // Upload File 
+    function uploadAvatar(input , place , btns) {
+        if (input.files && input.files[0]) {
+            let reader = new FileReader();
+            reader.onload = function(e) {
+                let name = input.files[0].name ,
+                    newSrc = e.target.result ,
+                    fileName = place , 
+                    buttons = btns ;
+                $(fileName).text('');
+                $(fileName).text(name);
+                $(buttons).addClass('show');
+                $(buttons).find('.view').attr('src', newSrc);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    $(document).on('click', '.uploadInput' ,function() {
+        $(this).on('change', function(){
+            uploadAvatar(this , $(this).parent().prev('.fileName') , $(this).parent().next('.uploadButtons'));
+        })
+    });
+
+    // View Uploaded File
+    $('.view').on('click', function() {
+        if($(this).attr('src')) {
+            $('#view').modal('show');
+            let src = $(this).attr('src');
+            $('#previewImage').attr('src', src);
+        }
+    });
+
+
+    // Change Profile Avatar 
+    function uploadAvatar(input , place) {
+        if (input.files && input.files[0]) {
+            let reader = new FileReader();
+            reader.onload = function(e) {
+                let newSrc = e.target.result ,
+                    avatar = place,
+                    img = $(avatar).find('img');
+                    $(img).attr('src', newSrc );
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    $(document).on('click', '.uploadAvatar input' ,function() {
+        $(this).on('change', function(){
+            uploadAvatar(this , $(this).parents().prev('.avatar'));
+        })
+    });
+
+
+    // Tabs 
+    $('.tabsList a').on('click' , function(e){
+        e.preventDefault();
+        $('.tabsList a').removeClass('active');
+        $(this).addClass('active');
+        
+        var itemId = $(this).attr("href"); 
+        $('.tabContent').removeClass('show'); 
+        $(itemId).addClass('show');
+    });
 
     
 
-
-    
-
-  
 
     // Start Animation 
     AOS.init();
 
-    
-    
-    
-   
 })(jQuery);
 

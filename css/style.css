@@ -1701,24 +1701,36 @@ footer h3::before {
 
 @media screen and (max-width:768px) {
     .share a {
-        width: 30px;
-        height: 30px;
-        font-size: 16px;
+        width: 25px;
+        height: 25px;
+        font-size: 14px;
     }
 
     .share a:hover {
         width: 40px;
     }
 
+    .FastContact {
+        bottom: 5px;
+        left: 5px;
+    }
+
     .FastContact a {
         width: 40px;
         height: 40px;
+        font-size: 16px;
+    }
+
+    .FastContact a:first-of-type {
+        margin-inline-end: 3px;
     }
 
     .scrollTop {
         width: 30px;
         height: 30px;
         font-size: 23px;
+        bottom: 10px;
+        right: 10px;
     }
 }
 
@@ -3049,6 +3061,7 @@ footer h3::before {
 .stepContent>.sectitle {
     font-size: 22px;
     margin-bottom: 0;
+    text-align: center;
 }
 
 .stepContent .formBox {
@@ -3212,6 +3225,59 @@ footer h3::before {
 }
 
 .radioBox input:checked+label:after {
+    display: block;
+}
+
+.checkBox {
+    position: relative;
+}
+
+.checkBox input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    opacity: 0;
+}
+
+.checkBox label {
+    position: relative;
+    display: flex;
+}
+
+.checkBox label::before {
+    content: '';
+    border: var(--border);
+    border-radius: 3px;
+    border-color: var(--text);
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-inline-end: 5px;
+}
+
+.checkBox input:checked+label::before {
+    border-color: var(--secondaryColor);
+}
+
+.checkBox label::after {
+    content: '';
+    position: absolute;
+    right: 6px;
+    top: 4px;
+    width: 6px;
+    height: 12px;
+    border: solid var(--secondaryColor);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    display: none;
+}
+
+.checkBox input:checked+label:after {
     display: block;
 }
 
@@ -3419,8 +3485,170 @@ footer h3::before {
     margin-inline-start: 10px;
 }
 
+.uploadWrapper {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.uploadFile {
+    border: var(--border);
+    height: 50px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline-end: 10px;
+    width: calc(100% - 200px);
+}
+
+.fileName {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.upload {
+    width: 90px;
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+    margin-inline-start: auto;
+}
+
+.upload input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: var(--apple);
+    margin: 0;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.upload input:hover+label {
+    background: var(--yellow);
+}
+
+.uploadWrapper i {
+    margin-inline-start: 5px;
+    font-size: 22px;
+}
+
+.uploadButtons {
+    display: none;
+    align-items: center;
+
+}
+
+.uploadButtons.show {
+    display: flex;
+}
+
+.uploadButtons>div {
+    width: 90px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.delete {
+    margin: 0 5px;
+    background: var(--youtube);
+}
+
+.delete:hover {
+    background: var(--mainColor);
+}
+
+.view {
+    background: var(--whatsapp);
+}
+
+.view:hover {
+    background: var(--mainColor);
+}
+
+.previewPaper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.previewPaper img {
+    width: 100%;
+}
+
+.success {
+    text-align: center;
+}
+
+.success img {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.success h4 {
+    margin-bottom: 20px;
+}
+
+.success h2 {
+    font-size: 27px;
+    font-weight: 700;
+    color: var(--whatsapp);
+    margin-bottom: 20px;
+}
+
+.success h3 {
+    font-size: 20px;
+}
+
+.success h3 b,
+.success h3 span {
+    font-size: 30px;
+}
+
+.success h3 span {
+    color: var(--secondaryColor);
+}
+
+.success h3 b {
+    color: var(--facebook);
+}
+
+.success .mainBtn {
+    font-size: 15px;
+    margin: 30px auto 0;
+}
 
 @media screen and (max-width:768px) {}
+
+@media (min-width:1024px) {
+    .modal-dialog {
+        max-width: 900px;
+    }
+}
 
 /*==========================||---------------------------||========================*/
 /*==========================||           Login           ||========================*/
@@ -3537,11 +3765,742 @@ footer h3::before {
 }
 
 /*==========================||---------------------------||========================*/
-/*==========================||            En             ||========================*/
+/*==========================||           Profile         ||========================*/
 /*==========================||---------------------------||========================*/
 
+.profileSide {
+    border: var(--border);
+}
 
-@media screen and (max-width:768px) {}
+.profileAvatar {
+    background: var(--grey);
+    padding: 20px 20px 0 20px;
+    height: 130px;
+    margin-bottom: 50px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    padding: 4px;
+    background: var(--white);
+    border-radius: 50%;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+    -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+    -o-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+    -ms-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+    margin: 0 auto;
+    transform: translateY(51px);
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.profileSideHeader h2 {
+    font-size: 18px;
+}
+
+.profileSideHeader {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sideMenu a {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    color: var(--text);
+    border-top: var(--border);
+}
+
+.sideMenu a:hover {
+    background: var(--secondaryColor);
+    color: var(--white);
+}
+
+.sideMenu .active {
+    color: var(--white);
+    background: linear-gradient(130deg, rgba(140, 44, 92, 1) 0%, rgba(45, 57, 144, 1) 100%);
+    background: -webkit-linear-gradient(130deg, rgba(140, 44, 92, 1) 0%, rgba(45, 57, 144, 1) 100%);
+}
+
+.sideMenu a i {
+    width: 25px;
+    font-size: 22px;
+    margin-inline-start: 5px;
+}
+
+.profileWrapper {
+    border: var(--border);
+    padding: 20px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.profileWrapper .sectitle {
+    position: absolute;
+    background: var(--white);
+    top: -25px;
+    right: 20px;
+    font-size: 25px;
+    margin: 0;
+    height: 40px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+.profileWrapper .sectitle::before {
+    opacity: 0;
+}
+
+.avatarBox {
+    width: 150px;
+    height: 150px;
+    margin: 40px auto;
+    position: relative;
+}
+
+.avatarBox .avatar {
+    width: 100%;
+    height: 100%;
+    transform: translateY(0);
+}
+
+.uploadAvatar {
+    position: absolute;
+    bottom: -12px;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    left: calc(50% - 15px);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.uploadAvatar input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.uploadAvatar label {
+    margin: 0;
+    cursor: pointer;
+}
+
+.uploadAvatar i {
+    font-size: 30px;
+}
+
+.uploadAvatar input:hover+label {
+    color: var(--secondaryColor);
+}
+
+.profileForm .inputField::after {
+    opacity: 0;
+}
+
+.profileWrapper .mainBtn {
+    font-size: 15px;
+}
+
+.profileFlex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profileForm .mainBtn {
+    width: auto;
+    min-width: 120px;
+    padding: 0 15px;
+}
+
+.secondaryBtn {
+    background: var(--mainColor);
+}
+
+.dashboard .col-12 {
+    padding: 15px;
+}
+
+.dashboardBlock {
+    background: var(--grey);
+    border: var(--border);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.blockIcon {
+    width: 50px;
+    font-size: 50px;
+    margin-inline-end: 10px;
+}
+
+.dashboardBlock p {
+    color: inherit;
+}
+
+.dashboardBlock h2 {
+    margin: 0;
+    color: var(--secondaryColor);
+    font-weight: 900;
+}
+
+.dashboardBlock:hover {
+    background: var(--purple);
+    color: var(--white);
+}
+
+.tableBox {
+    padding: 20px 0 0 0;
+}
+
+.tableHead {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.tableHead>* {
+    font-size: 14px;
+    width: fit-content;
+    padding: 0 15px;
+    margin-inline-start: 10px;
+    height: 40px;
+    font-weight: 500;
+}
+
+.darkBtn {
+    background: var(--apple);
+}
+
+.tableHead i {
+    margin-inline-start: 5px;
+    font-size: 17px;
+}
+
+.table {
+    margin: 0;
+    text-align: center;
+}
+
+.table thead {
+    background: var(--grey);
+}
+
+.table thead th {
+    font-size: 14px;
+}
+
+.status {
+    display: inline-flex;
+    border-radius: 4px;
+    color: var(--white);
+    font-size: 13px;
+    padding: 2px 8px;
+    font-weight: 600;
+}
+
+.status-canceld {
+    background: var(--yellow);
+}
+
+.status-active {
+    background: var(--whatsapp);
+}
+
+.status-finished {
+    background: var(--google);
+}
+
+.tableActions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tableActions>* {
+    padding: 5px 10px;
+    background: var(--grey);
+    border: var(--border);
+    font-size: 14px;
+    color: var(--textDark);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: all .4s ease-in-out;
+}
+
+.tableActions>*:hover {
+    background: var(--mainColor);
+    color: var(--white);
+    border-color: var(--mainColor);
+}
+
+.contractDetails {
+    padding: 20px 0 0 0;
+}
+
+.listBlock {
+    border: var(--border);
+    margin-bottom: 30px;
+}
+
+.listBockHead {
+    background: var(--grey);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px;
+    text-align: center;
+    border-bottom: var(--border);
+}
+
+.listBlockBody {
+    padding: 20px;
+}
+
+.listBlock p {
+    line-height: 30px;
+    margin-bottom: 5px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.listBlock p::before {
+    content: '\eed6';
+    font-family: IcoFont;
+    color: var(--yellow);
+}
+
+.listBlock label {
+    color: var(--textDark);
+    font-weight: 500;
+    margin: 0 5px;
+}
+
+.listBlock .map {
+    height: 425px;
+}
+
+.listBlock .status {
+    width: 80%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    margin: auto;
+}
+
+.tabs {
+    padding: 20px 0 0 0;
+}
+
+.tabsList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.tabsList a {
+    width: calc( 50% - 5px);
+    height: 45px;
+    background: var(--grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text);
+    border: var(--border);
+}
+
+.tabsList .active {
+    color: var(--white);
+    background: var(--secondaryColor);
+    border-color: var(--secondaryColor);
+}
+
+.tabsList a i {
+    font-size: 20px;
+    margin-inline-start: 10px;
+}
+
+.tabContent {
+    display: none;
+}
+
+.tabContent.show {
+    display: block;
+}
+
+.visitsWrapper .col-12 {
+    margin-bottom: 30px;
+}
+
+.visit {
+    border: var(--border);
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-inline-start-width: 4px;
+}
+
+.commingVisit {
+    border-inline-start-color: var(--whatsapp);
+}
+
+.finishedVisit {
+    border-inline-start-color: var(--google);
+}
+
+.visit .visitIcon {
+    font-size: 65px;
+    width: 80px;
+}
+
+.visit h3 {
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.commingVisit  h3 {
+    color: var(--whatsapp);
+}
+
+.finishedVisit  h3 {
+    color: var(--google);
+}
+
+.visit p {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.visit label {
+    color: var(--textDark);
+    font-weight: 500;
+    margin-inline-end: 5px;
+    margin-bottom: 0;
+}
+
+.supportVector {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticketForm {
+    padding: 20px 0;
+}
+
+.offerWrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-radius: 25px;
+}
+
+.offer {
+    padding: 0;
+    position: relative;
+    margin-bottom: 40px;
+    border: var(--border);
+    border-radius: 25px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+    -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+    -o-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+    -ms-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+}
+
+.offerHead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.offerPrice {
+    display: flex;
+    justify-content: center;
+    border: var(--border);
+    border-color: var(--white);
+    border-width: 3px;
+    position: relative;
+    z-index: 1;
+    background: var(--white);
+    border-radius: 0 25px;
+    padding: 5px 20px;
+    width: fit-content;
+    margin: 0;
+    background: var(--google);
+    color: var(--white);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+    -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+    -o-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+    -ms-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+}
+
+.nightOffer .offerPrice {
+    background: var(--purple);
+}
+
+.offerPrice h2 {
+    font-size: 27px;
+    font-weight: 700;
+    margin: 0;
+    font-size: 20px;
+}
+
+.offerPrice h5 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.offerData {
+    padding: 20px;
+}
+
+.offer h3 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.offer i {
+    font-size: 24px;
+    margin-inline-start: 10px;
+    display: inline-flex;
+    color: var(--google);
+}
+
+.nightOffer i {
+    color: var(--purple);
+}
+
+.offer p {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+    line-height: 35px;
+}
+
+.offer label {
+    margin: 0;
+    color: var(--textDark);
+    margin-inline-end: 10px;
+    font-weight: 500;
+}
+
+.offer .oldPrice {
+    text-decoration: line-through;
+    color: var(--mainColor);
+    font-size: 18px;
+}
+
+.offer b {
+    font-size: 23px;
+    color: var(--instagram);
+}
+
+.getOffer {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--mainColor);
+    background: var(--grey);
+    border: var(--border);
+    border-color: var(--white);
+    border-radius: 25px 0;
+    height: 40px;
+    width: 150px;
+    padding: 0 20px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all .4s ease-in-out;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+    -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+    -o-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+    -ms-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+}
+
+.getOffer:hover {
+    background: var(--mainColor);
+    border-color: var(--mainColor);
+    color: var(--white);
+}
+
+@media screen and (max-width:768px) {
+    .profileSide {
+        margin-bottom: 50px;
+    }
+
+    .profileAvatar {
+        height: 100px;
+    }
+
+    .profileAvatar .avatar {
+        transform: translateY(30px);
+        width: 90px;
+        height: 90px;
+    }
+
+    .sideMenu a {
+        font-size: 14px;
+    }
+
+    .profileWrapper {
+        padding: 12px;
+    }
+
+    .profileWrapper .sectitle {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+    }
+
+    .avatarBox {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profileForm .mainBtn {
+        min-width: 100px;
+        font-size: 12px;
+        height: 40px;
+    }
+
+    .tableHead>* {
+        font-size: 12px;
+        height: 30px;
+        padding: 0 10px;
+    }
+
+    .tableHead>* i {
+        font-size: 12px;
+        margin-inline-start: 2px;
+    }
+
+    .profileWrapper .mainBtn {
+        font-size: 13px;
+    }
+
+    .tableWrapper {
+        overflow: auto;
+        padding-bottom: 20px;
+    }
+
+    .tableWrapper::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    .table thead th,
+    .table tbody td {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .status {
+        font-size: 12px;
+    }
+
+    .tableActions>* {
+        font-size: 13px;
+        padding: 0 5px;
+        min-height: 30px;
+    }
+
+    .dashboard .col-12 {
+        padding: 5px 15px;
+    }
+
+    .listBlockBody {
+        padding: 12px 8px;
+    }
+    
+    .listBlock p {
+        font-size: 13px;
+    }
+    
+    .listBockHead {
+        font-size: 16px;
+    }
+    
+    .listBlock .map {
+        height: 300px;
+    }
+    
+    .listBlock label {
+        margin: 0 3px;
+    }
+
+    .tabsList a {
+        font-size: 13px;
+        padding: 0 5px;
+    }
+
+    .tabsList a i {
+        font-size: 13px;
+        margin-inline-start: 5px;
+    }
+    
+    .visitsWrapper .col-12 {
+        margin-bottom: 15px;
+    }
+    
+    .visit {
+        padding: 12px;
+    }
+    
+    .visit .visitIcon {
+        font-size: 40px;
+        width: 50px;
+    }
+    
+    .visit h3 {
+        font-size: 14px;
+    }
+    
+    .visit p {
+        font-size: 14px;
+        line-height: 25px;
+    }
+}
+
+@media (min-width:768px) and (max-width:992px) {
+    .visit {
+        flex-direction: column;
+    }
+}
 
 /*==========================||---------------------------||========================*/
 /*==========================||            En             ||========================*/
