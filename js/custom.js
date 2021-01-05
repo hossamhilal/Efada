@@ -346,6 +346,12 @@
         $('.addAddress').show();
     });
 
+    // Back To Address 
+    $('.backToAdresses').on('click' , function(e){
+        $('.addAddress').hide();
+        $('.addresses').show();
+    });
+
     // Start Animation 
     AOS.init();
 
