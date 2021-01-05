@@ -143,70 +143,95 @@
                 <!-- Steps Content  -->
                 <div class="stepsContent">
                     <form action="">
-                        <!-- stepContent  -->
+                        <!-- step One  -->
                         <div class="stepContent show" id="step1"> 
                             <h2 class="sectitle"> تحديد الموقع والعنوان </h2>
                             <div class="formBox">
-                                <div class="row">
-                                    <div class="col-12 col-sm-6">
-                                        <div class="inputField selectField"> 
-                                            <select class="input customSelect">
-                                                <option selected> المدينة </option>
-                                                <option value="0">المدينة </option>
-                                                <option value="1">المدينة</option>
-                                                <option value="2">المدينة</option>
-                                            </select>
+                                <div class="addresses">
+                                    <div class="address">
+                                        <div class="radioBox">
+                                            <input type="radio" name="address">
+                                            <label></label>
+                                        </div>
+                                        <div class="addressBody">
+                                            <ul>
+                                                <li> <label> المدينة :  </label> <span> الرياض </span> </li>
+                                                <li> <label> نوع السكن: </label> <span> منزل </span> </li>
+                                                <li> <label> الحي : </label> <span> المروج </span> </li>
+                                                <li> <label> رقم الشقة :  </label> <span> 15 </span> </li>
+                                                <li> <label> رقم الطابق: </label> <span> 3 </span> </li>
+                                                <li> <label> رقم المنزل: </label> <span> 123 </span> </li>
+                                            </ul>
+                                        </div>
+                                        <div class="addressFooter">
+                                            <a href="#" class="mainBtn darkBtn">  <span> الخريطة </span> </a>
+                                            <div class="deleteAddress mainBtn darkBtn"> <span> حذف </span> </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-sm-6">
-                                        <div class="inputField selectField"> 
-                                            <select class="input customSelect">
-                                                <option selected> الحي </option>
-                                                <option value="0">الحي </option>
-                                                <option value="1">الحي</option>
-                                                <option value="2">الحي</option>
-                                            </select>
-                                        </div>                                        
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="inputField"> 
-                                            <input class="input" id="address" type="text" placeholder="العنوان كاملا" readonly> 
-                                        </div>                                        
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="map" id="map">
-                                            <iframe width="100%" height="100%" src="https://maps.google.com/maps?width=100%&amp;height=400&amp;hl=en&amp;coord=24.7136, 46.6753&amp;q=Riydah+(Riydah)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/draw-radius-circle-map/">Create radius map</a></iframe>
-                                        </div> 
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <div class="inputField selectField"> 
-                                            <select class="input customSelect">
-                                                <option selected> نوع السكن </option>
-                                                <option value="0"> فيلا </option>
-                                                <option value="1">عمارة</option>
-                                            </select>
-                                        </div>                                          
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <div class="inputField selectField"> 
-                                            <select class="input customSelect">
-                                                <option selected> رقم الطابق </option>
-                                                <option value="0"> ارضى </option>
-                                                <option value="1"> 1 </option>
-                                                <option value="1"> 2 </option>
-                                                <option value="1"> 3 </option>
-                                            </select>
-                                        </div>                                          
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <div class="inputField"> 
-                                            <input class="input" type="text" placeholder="رقم المنزل"> 
-                                        </div>                                          
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <div class="inputField"> 
-                                            <input class="input" type="text" placeholder="معلم او مكان قريب من العنوان"> 
-                                        </div>                                          
+                                    <div class="addNewAddressBtn mainBtn blueBtn"> <span> إضافة عنوان جديد </span> </div>
+                                </div>
+                                <div class="addAddress">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6">
+                                            <div class="inputField selectField"> 
+                                                <select class="input customSelect">
+                                                    <option selected> المدينة </option>
+                                                    <option value="0">المدينة </option>
+                                                    <option value="1">المدينة</option>
+                                                    <option value="2">المدينة</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="inputField selectField"> 
+                                                <select class="input customSelect">
+                                                    <option selected> الحي </option>
+                                                    <option value="0">الحي </option>
+                                                    <option value="1">الحي</option>
+                                                    <option value="2">الحي</option>
+                                                </select>
+                                            </div>                                        
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="inputField"> 
+                                                <input class="input" id="address" type="text" placeholder="العنوان كاملا" readonly> 
+                                            </div>                                        
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="map" id="map">
+                                                <iframe width="100%" height="100%" src="https://maps.google.com/maps?width=100%&amp;height=400&amp;hl=en&amp;coord=24.7136, 46.6753&amp;q=Riydah+(Riydah)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/draw-radius-circle-map/">Create radius map</a></iframe>
+                                            </div> 
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="inputField selectField"> 
+                                                <select class="input customSelect">
+                                                    <option selected> نوع السكن </option>
+                                                    <option value="0"> فيلا </option>
+                                                    <option value="1">عمارة</option>
+                                                </select>
+                                            </div>                                          
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="inputField selectField"> 
+                                                <select class="input customSelect">
+                                                    <option selected> رقم الطابق </option>
+                                                    <option value="0"> ارضى </option>
+                                                    <option value="1"> 1 </option>
+                                                    <option value="1"> 2 </option>
+                                                    <option value="1"> 3 </option>
+                                                </select>
+                                            </div>                                          
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="inputField"> 
+                                                <input class="input" type="text" placeholder="رقم المنزل"> 
+                                            </div>                                          
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="inputField"> 
+                                                <input class="input" type="text" placeholder="معلم او مكان قريب من العنوان"> 
+                                            </div>                                          
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -214,7 +239,7 @@
                                 <button class="mainBtn nextStep" type="button"> <span> التالي </span>  </button> 
                             </div>
                         </div>
-                        <!-- Step Content  -->
+                        <!-- Step Two  -->
                         <div class="stepContent" id="step2"> 
                             <h2 class="sectitle"> إختيار الباقة المناسبة </h2>
                             <div class="formBox"> 
@@ -378,6 +403,7 @@
                                 <button class="mainBtn nextStep" type="button"> <span> التالي </span>  </button> 
                             </div>
                         </div>
+                        <!-- Step Three  -->
                         <div class="stepContent" id="step3"> 
                             <h2 class="sectitle"> </h2>
                             <div class="formBox"> 
@@ -388,6 +414,7 @@
                                 <button class="mainBtn nextStep" type="button"> <span> التالي </span>  </button> 
                             </div>
                         </div>
+                        <!-- Step Four  -->
                         <div class="stepContent" id="step4"> 
                             <h2 class="sectitle"> الإطلاع على تفاصيل الطلب </h2>
                             <div class="formBox"> 
@@ -414,6 +441,7 @@
                                 <button class="mainBtn nextStep" type="button"> <span> التالي </span>  </button> 
                             </div>
                         </div>
+                        <!-- Step Five  -->
                         <div class="stepContent" id="step5"> 
                             <h2 class="sectitle"> نص العقد والتوقيع </h2>
                             <div class="formBox"> 
@@ -680,6 +708,7 @@
                                 <button class="mainBtn nextStep" type="button"> <span> التالي </span>  </button> 
                             </div>
                         </div>
+                        <!-- Step six  -->
                         <div class="stepContent" id="step6"> 
                             <h2 class="sectitle"> رفع المرفقات </h2>
                             <div class="formBox"> 
@@ -749,6 +778,7 @@
                                 <button class="mainBtn nextStep" type="button"> <span> التالي </span>  </button> 
                             </div>
                         </div>
+                        <!-- Step Seven  -->
                         <div class="stepContent" id="step7"> 
                             <h2 class="sectitle"> الدفع والتمتع بخدماتنا </h2>
                             <div class="formBox"> 
@@ -768,7 +798,7 @@
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Modal To Display Image -->
     <div class="modal fade" id="view" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">

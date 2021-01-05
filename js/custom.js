@@ -205,6 +205,7 @@
             nextStepWizard = $('.step[href="#' + currentStepBtn + '"]').next();
 
         nextStepWizard.removeClass('disabled').addClass('active').trigger('click');
+        nextStepWizard.prev('.step').addClass('finished');
     });
 
     // Move To Wizard Prev Step 
@@ -214,6 +215,7 @@
             prevStepWizard = $('.step[href="#' + currentStepBtn + '"]').prev();
 
         prevStepWizard.removeClass('disabled').addClass('active').trigger('click');
+        nextStepWizard.next('.step').removeClass('finished');
     });
 
     // Choose Package
@@ -327,6 +329,21 @@
         var itemId = $(this).attr("href"); 
         $('.tabContent').removeClass('show'); 
         $(itemId).addClass('show');
+    });
+
+    // Choose Address
+    $('.address input').change(function(){ 
+        if ( this.checked )  {
+            $('.address').removeClass('selected');
+            $(this).parents('.address').addClass('selected');
+        }
+        else $(this).parents('.address').removeClass('selected');
+    });
+
+    // Add New Address 
+    $('.addNewAddressBtn').on('click' , function(e){
+        $('.addresses').hide();
+        $('.addAddress').show();
     });
 
     // Start Animation 

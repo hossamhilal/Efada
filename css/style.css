@@ -2980,6 +2980,7 @@ footer h3::before {
     justify-content: space-between;
     position: relative;
     margin-bottom: 50px;
+    overflow: hidden;
 }
 
 .steps::before {
@@ -3008,6 +3009,16 @@ footer h3::before {
     position: relative;
 }
 
+.step.active::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 1000px;
+    height: 4px;
+    background: var(--secondaryColor);
+}
+
 .stepIcon {
     background: var(--grey);
     width: 100px;
@@ -3020,6 +3031,8 @@ footer h3::before {
     margin: 0 auto 15px;
     border: var(--border);
     border-width: 3px;
+    position: relative;
+    z-index: 1;
 }
 
 .step.active .stepIcon {
@@ -3027,11 +3040,19 @@ footer h3::before {
     background: var(--purple);
 }
 
+.step.finished .stepIcon {
+    background: var(--secondaryColor);
+}
+
 .stepIcon img {
     max-height: 100%;
 }
 
 .step.active .stepIcon img {
+    filter: brightness(0) invert(1);
+}
+
+.step.finished .stepIcon img {
     filter: brightness(0) invert(1);
 }
 
@@ -3068,6 +3089,10 @@ footer h3::before {
     padding: 30px 0;
 }
 
+.addAddress {
+    display: none;
+}
+
 .stepContent .inputField {
     margin-bottom: 30px;
 }
@@ -3084,6 +3109,74 @@ footer h3::before {
 .stepContent .map {
     height: 350px;
     margin-bottom: 30px;
+}
+
+.address {
+    border: var(--border);
+    background: var(--grey);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.address .radioBox {
+    width: 40px;
+    height: 40px;
+}
+
+.address .radioBox label::before {
+    width: 40px;
+    height: 40px;
+    background: var(--white);
+    border-width: 3px;
+}
+
+.address .radioBox label:after {
+    width: 12px;
+    height: 27px;
+    top: 3px;
+    right: 13px;
+}
+
+.addressBody ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.addressBody li {
+    min-width: 50%;
+    line-height: 30px;
+    margin-bottom: 5px;
+    color: var(--text);
+}
+
+.addressBody label {
+    margin: 0;
+    font-weight: 500;
+    color: var(--textDark);
+}
+
+.address .darkBtn {
+    width: 100px;
+    font-size: 14px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.address .darkBtn:nth-child(2) {
+    margin: 0;
+}
+
+.address.selected {
+    border-color: var(--secondaryColor);
+}
+
+.addresses .addNewAddressBtn {
+    margin-inline-start: auto;
+    font-size: 15px;
+    background: var(--mainColor);
 }
 
 .filter {
@@ -3164,6 +3257,8 @@ footer h3::before {
     align-items: center;
     font-size: 15px;
     margin-bottom: 10px;
+    min-width: 25px;
+    min-height: 25px;
 }
 
 .themeDefault {
@@ -3637,6 +3732,35 @@ footer h3::before {
     margin: 30px auto 0;
 }
 
+@media screen and (max-width:575px) {
+    .address {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .addressFooter {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px 0 0 0;
+    }
+
+    .addressBody li {
+        font-size: 13px;
+        width: 100%;
+    }
+
+    .address .darkBtn {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .address .radioBox {
+        position: absolute;
+        left: 10px;
+    }
+}
+
 @media screen and (max-width:768px) {
     .steps {
         flex-wrap: wrap;
@@ -3676,6 +3800,10 @@ footer h3::before {
 
     .stepPackages {
         margin: 15px 0 0 0;
+    }
+
+    .addressBody li {
+        font-size: 13px;
     }
 
     .contractWrapper {
@@ -3750,8 +3878,9 @@ footer h3::before {
     .uploadFile span {
         display: none;
     }
-    
-    .upload, .uploadButtons>div {
+
+    .upload,
+    .uploadButtons>div {
         width: 40px;
         min-width: 40px;
         height: 40px;
@@ -3759,8 +3888,9 @@ footer h3::before {
         align-items: center;
         justify-content: center;
     }
-    
-    .upload i , .uploadButtons>div i {
+
+    .upload i,
+    .uploadButtons>div i {
         font-size: 18px;
         margin: 0;
     }
