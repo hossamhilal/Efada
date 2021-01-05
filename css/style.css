@@ -2623,10 +2623,12 @@ footer h3::before {
 
 .branch a {
     color: var(--white);
-    font-size: 21px;
-    width: 35px;
+    font-size: 14px;
+    /* width: 35px; */
     height: 35px;
-    border-radius: 50%;
+    padding: 0 10px;
+    border-radius: 25px;
+    font-weight: 600;
     background: var(--yellow);
     display: flex;
     align-items: center;
@@ -2769,7 +2771,7 @@ footer h3::before {
     content: url('../images/mapDots.png');
     position: absolute;
     bottom: 20px;
-    right: -18%;
+    right: -9%;
 }
 
 .contactMap .map {
@@ -2899,8 +2901,10 @@ footer h3::before {
 }
 
 .cat {
+    display: block;
     margin-bottom: 30px;
     text-align: center;
+    cursor: pointer;
 }
 
 .catIcon {
@@ -2910,6 +2914,12 @@ footer h3::before {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all .4s ease-in-out;
+}
+
+.cat:hover .catIcon {
+    width: 100%;
+    height: 100%;
 }
 
 .cat h3 {
@@ -2921,6 +2931,15 @@ footer h3::before {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 900;
+    transition: all .4s ease-in-out;
+}
+
+.cat:hover h3 {
+    transform: translateY(10px);
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    width: 0;
 }
 
 .cats {
@@ -2962,6 +2981,12 @@ footer h3::before {
 
     .cat h3 {
         font-size: 14px;
+    }
+}
+
+@media (min-width:1024px) {
+    .cat {
+        height: 145px;
     }
 }
 
@@ -4782,4 +4807,165 @@ footer h3::before {
     text-align: left;
 }
 
-@media screen and (max-width:768px) {}
+.en .sliderBtn {
+    flex-direction: row-reverse;
+}
+
+.en .dropList {
+    transform: translate(-60px, 40px);
+}
+
+.en .dropDown:hover .dropList {
+    transform: translate(-60px, 0);
+}
+
+.en .FastContact {
+    left: auto;
+    right: 19px;
+}
+
+.en .service .serviceBody a i::before {
+    content: '\eab8';
+}
+
+.en .offers .owl-nav {
+    flex-direction: row-reverse;
+}
+
+.en .offerItem::before {
+    left: 0;
+    right: auto;
+}
+
+.en .blogPic span {
+    left: auto;
+    right: 15px;
+}
+
+.en .linkBtn i::before {
+    content: '\eac0';
+}
+
+.en .linkBtn:hover i {
+    margin-inline-start: 8px;
+}
+
+.en .scrollTop {
+    right: auto;
+    left: 20px;
+}
+
+.en .inputField::after {
+    left: 0;
+    right: auto;
+}
+
+.en .branch a {
+    flex-direction: row-reverse;
+}
+
+.en .textLink::after {
+    left: 0;
+    right: auto;
+}
+
+.en .contactMap::before {
+    left: 0;
+    right: auto;
+}
+
+.en .contactMap::after {
+    left: -9%;
+    right: auto;
+}
+
+.en .profileWrapper .sectitle {
+    left: 20px;
+    right: auto;
+}
+
+.en .sideMenu a i {
+    margin-inline-start: 0;
+    margin-inline-end: 5px;
+}
+
+.en .offerPrice {
+    border-radius: 25px 0;
+    flex-direction: row-reverse;
+}
+
+.en .getOffer {
+    border-radius: 0 25px;
+}
+
+.en .offer i {
+    margin-inline-start: 0;
+    margin-inline-end: 10px;
+}
+
+.en .tabsList a i {
+    margin-inline-start: 0;
+    margin-inline-end: 10px;
+}
+
+.en .step.active::before {
+    left: auto;
+    right: 50px;
+}
+
+.en .stepPackage .themeDefault {
+    right: 15px;
+    left: auto;
+    margin: 0;
+}
+
+.en .checkBox input {
+    right: auto;
+    left: 0;
+}
+
+.en .checkBox label::after {
+    left: 8px;
+    right: auto;
+}
+
+.en .uploadFile i {
+    margin-inline-start: 0;
+    margin-inline-end: 5px;
+}
+
+
+@media screen and (max-width:768px) {
+    .en .FastContact {
+        right: 5px;
+    }
+    
+    .en .scrollTop {
+        left: 10px;
+    }
+
+    .en .tabsList a i {
+        margin-inline-start: 0;
+        margin-inline-end: 5px;
+    }
+
+    .en .uploadFile i {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .en .navBtn {
+        margin-inline-end: auto;
+    }
+    
+    .en .language {
+        margin-inline-end: 20px;
+    }
+    
+    .en .navMenu {
+        right: 0;
+        left: auto;
+        transform: translateX(100%);
+    }
+}
