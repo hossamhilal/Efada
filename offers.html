@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/icofont.min.css">
     <link rel="stylesheet" href="plugins/owlCarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="plugins/noUiSlider/nouislider.css">
     <link rel="stylesheet" href="plugins/animation/aos.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -105,173 +106,301 @@
     </div>
 
     <!-- Offers Page  -->
-    <div class="profilePage secPadding">
+    <div class="profilePage offersPage secPadding">
         <div class="container">
             <!-- Packages  -->
             <div class="profileWrapper offerWrapper">
                 <div class="sectitle"> الباقات </div>
-                <div class="tabs">
-                    <div class="tabsList">
-                        <a href="#tab1" class="active"> <i class="icofont-sun-alt"></i> الباقات الصباحية </a>
-                        <a href="#tab2"> <i class="icofont-night"></i> الباقات المسائية </a> 
+                <!-- Filter  -->
+                <div class="filter packagesFilter">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-lg-2">
+                            <div class="field">
+                                <label> الباقات </label>
+                                <div class="radioField"> 
+                                    <div class="radioBox"> 
+                                        <input type="radio" class="choosePackage" name="choose">
+                                        <label>  الصباحية </label>
+                                    </div>
+                                    <div class="radioBox"> 
+                                        <input type="radio" class="choosePackage" name="choose">
+                                        <label>  المسائية </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="field">
+                                <label> الجنسية </label>
+                                <div class="inputField selectField"> 
+                                    <select class="input customSelect">
+                                        <option selected> الجنسية </option>
+                                        <option value="0"> نيجيريا </option>
+                                        <option value="1"> بنجلاديش </option>
+                                        <option value="2"> غانا </option>
+                                        <option value="2"> إندونيسيا </option>
+                                    </select>
+                                </div>
+                            </div>                      
+                        </div>
+                        <div class="col-12 col-sm-9 col-lg-4">
+                            <div class="field">
+                                <label> السعر </label>
+                                <div class="rangeslider">
+                                    <div id="priceRange" class="range" data-min="0" data-max="5000" data-start="1500" data-end="3000"></div>
+                                    <div class="rangeValues">
+                                        <p> <span class="range_min"></span> <b> ريال </b></p>
+                                        <p> <span class="range_max"></span> <b> ريال </b></p>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="col-12 col-sm-3 col-lg-2">
+                            <button class="mainBtn"> <span> عرض الباقات </span></button>
+                        </div>
                     </div>
-                    <div class="tabsContent">
-                        <div class="tabContent show" id="tab1"> 
-                            <div class="offers">
-                                <div class="row">
-                                    <div class="col-12 col-md-6">
-                                        <div class="offer">
-                                            <div class="offerHead">
-                                                <div class="offerPrice"> 
-                                                    <h2> 30ريال </h2> 
-                                                    <h5> للساعة </h5>
-                                                </div>
-                                                <a href="order.html" class="getOffer"> اطلب العرض </a>
-                                            </div>
-                                            <div class="offerData">
-                                                <h3> <i class="icofont-package"></i> زيارة تنظيف فردية بـ 120 ر.س (بدون ضريبة) </h3>
-                                                <p> <i class="icofont-ui-calendar"></i> <label> ينتهى  : </label> <span> 1/20/2021</span></p>
-                                                <p> <i class="icofont-id"></i> <label>   الجنسية : </label> <span>  الفلبين  </span> </p>
-                                                <p> <i class="icofont-price"></i> <label> السعر قبل الخصم : </label> <span class="oldPrice">  230 ريال  </span> </p>
-                                                <p> <i class="icofont-sale-discount"></i> <label> سعر الباقة بعد الخصم بالضريبة : </label> <b>  138 ريال  </b> </p>
-                                            </div>
+                </div>
+                <div class="tabs">
+                    <div class="offers">
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="offer">
+                                    <div class="offerHead">
+                                        <div class="offerPrice"> 
+                                            <h2> 30ريال </h2> 
+                                            <h5> للساعة </h5>
                                         </div>
+                                        <a href="order.html" class="getOffer"> اطلب العرض </a>
                                     </div>
-                                    <div class="col-12 col-md-6">
-                                        <div class="offer">
-                                            <div class="offerHead">
-                                                <div class="offerPrice"> 
-                                                    <h2> 30ريال </h2> 
-                                                    <h5> للساعة </h5>
-                                                </div>
-                                                <a href="order.html" class="getOffer"> اطلب العرض </a>
-                                            </div>
-                                            <div class="offerData">
-                                                <h3> <i class="icofont-package"></i> زيارة تنظيف فردية بـ 120 ر.س (بدون ضريبة) </h3>
-                                                <p> <i class="icofont-ui-calendar"></i> <label> ينتهى  : </label> <span> 1/20/2021</span></p>
-                                                <p> <i class="icofont-id"></i> <label>   الجنسية : </label> <span>  الفلبين  </span> </p>
-                                                <p> <i class="icofont-price"></i> <label> السعر قبل الخصم : </label> <span class="oldPrice">  230 ريال  </span> </p>
-                                                <p> <i class="icofont-sale-discount"></i> <label> سعر الباقة بعد الخصم بالضريبة : </label> <b>  138 ريال  </b> </p>
-                                            </div>
-                                        </div>
+                                    <div class="offerData">
+                                        <h3> <i class="icofont-package"></i> زيارة تنظيف فردية بـ 120 ر.س (بدون ضريبة) </h3>
+                                        <p> <i class="icofont-ui-calendar"></i> <label> ينتهى  : </label> <span> 1/20/2021</span></p>
+                                        <p> <i class="icofont-id"></i> <label>   الجنسية : </label> <span>  الفلبين  </span> </p>
+                                        <p> <i class="icofont-price"></i> <label> السعر قبل الخصم : </label> <span class="oldPrice">  230 ريال  </span> </p>
+                                        <p> <i class="icofont-sale-discount"></i> <label> سعر الباقة بعد الخصم بالضريبة : </label> <b>  138 ريال  </b> </p>
                                     </div>
-                                    <div class="col-12 col-md-6">
-                                        <div class="offer">
-                                            <div class="offerHead">
-                                                <div class="offerPrice"> 
-                                                    <h2> 30ريال </h2> 
-                                                    <h5> للساعة </h5>
-                                                </div>
-                                                <a href="order.html" class="getOffer"> اطلب العرض </a>
-                                            </div>
-                                            <div class="offerData">
-                                                <h3> <i class="icofont-package"></i> زيارة تنظيف فردية بـ 120 ر.س (بدون ضريبة) </h3>
-                                                <p> <i class="icofont-ui-calendar"></i> <label> ينتهى  : </label> <span> 1/20/2021</span></p>
-                                                <p> <i class="icofont-id"></i> <label>   الجنسية : </label> <span>  الفلبين  </span> </p>
-                                                <p> <i class="icofont-price"></i> <label> السعر قبل الخصم : </label> <span class="oldPrice">  230 ريال  </span> </p>
-                                                <p> <i class="icofont-sale-discount"></i> <label> سعر الباقة بعد الخصم بالضريبة : </label> <b>  138 ريال  </b> </p>
-                                            </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="offer nightOffer">
+                                    <div class="offerHead">
+                                        <div class="offerPrice"> 
+                                            <h2> 30ريال </h2> 
+                                            <h5> للساعة </h5>
                                         </div>
+                                        <a href="order.html" class="getOffer"> اطلب العرض </a>
                                     </div>
-                                    <div class="col-12 col-md-6">
-                                        <div class="offer">
-                                            <div class="offerHead">
-                                                <div class="offerPrice"> 
-                                                    <h2> 30ريال </h2> 
-                                                    <h5> للساعة </h5>
-                                                </div>
-                                                <a href="order.html" class="getOffer"> اطلب العرض </a>
-                                            </div>
-                                            <div class="offerData">
-                                                <h3> <i class="icofont-package"></i> زيارة تنظيف فردية بـ 120 ر.س (بدون ضريبة) </h3>
-                                                <p> <i class="icofont-ui-calendar"></i> <label> ينتهى  : </label> <span> 1/20/2021</span></p>
-                                                <p> <i class="icofont-id"></i> <label>   الجنسية : </label> <span>  الفلبين  </span> </p>
-                                                <p> <i class="icofont-price"></i> <label> السعر قبل الخصم : </label> <span class="oldPrice">  230 ريال  </span> </p>
-                                                <p> <i class="icofont-sale-discount"></i> <label> سعر الباقة بعد الخصم بالضريبة : </label> <b>  138 ريال  </b> </p>
-                                            </div>
+                                    <div class="offerData">
+                                        <h3> <i class="icofont-package"></i> زيارة تنظيف فردية بـ 120 ر.س (بدون ضريبة) </h3>
+                                        <p> <i class="icofont-ui-calendar"></i> <label> ينتهى  : </label> <span> 1/20/2021</span></p>
+                                        <p> <i class="icofont-id"></i> <label>   الجنسية : </label> <span>  الفلبين  </span> </p>
+                                        <p> <i class="icofont-price"></i> <label> السعر قبل الخصم : </label> <span class="oldPrice">  230 ريال  </span> </p>
+                                        <p> <i class="icofont-sale-discount"></i> <label> سعر الباقة بعد الخصم بالضريبة : </label> <b>  138 ريال  </b> </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="offer">
+                                    <div class="offerHead">
+                                        <div class="offerPrice"> 
+                                            <h2> 30ريال </h2> 
+                                            <h5> للساعة </h5>
                                         </div>
+                                        <a href="order.html" class="getOffer"> اطلب العرض </a>
+                                    </div>
+                                    <div class="offerData">
+                                        <h3> <i class="icofont-package"></i> زيارة تنظيف فردية بـ 120 ر.س (بدون ضريبة) </h3>
+                                        <p> <i class="icofont-ui-calendar"></i> <label> ينتهى  : </label> <span> 1/20/2021</span></p>
+                                        <p> <i class="icofont-id"></i> <label>   الجنسية : </label> <span>  الفلبين  </span> </p>
+                                        <p> <i class="icofont-price"></i> <label> السعر قبل الخصم : </label> <span class="oldPrice">  230 ريال  </span> </p>
+                                        <p> <i class="icofont-sale-discount"></i> <label> سعر الباقة بعد الخصم بالضريبة : </label> <b>  138 ريال  </b> </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="offer nightOffer">
+                                    <div class="offerHead">
+                                        <div class="offerPrice"> 
+                                            <h2> 30ريال </h2> 
+                                            <h5> للساعة </h5>
+                                        </div>
+                                        <a href="order.html" class="getOffer"> اطلب العرض </a>
+                                    </div>
+                                    <div class="offerData">
+                                        <h3> <i class="icofont-package"></i> زيارة تنظيف فردية بـ 120 ر.س (بدون ضريبة) </h3>
+                                        <p> <i class="icofont-ui-calendar"></i> <label> ينتهى  : </label> <span> 1/20/2021</span></p>
+                                        <p> <i class="icofont-id"></i> <label>   الجنسية : </label> <span>  الفلبين  </span> </p>
+                                        <p> <i class="icofont-price"></i> <label> السعر قبل الخصم : </label> <span class="oldPrice">  230 ريال  </span> </p>
+                                        <p> <i class="icofont-sale-discount"></i> <label> سعر الباقة بعد الخصم بالضريبة : </label> <b>  138 ريال  </b> </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="offer">
+                                    <div class="offerHead">
+                                        <div class="offerPrice"> 
+                                            <h2> 30ريال </h2> 
+                                            <h5> للساعة </h5>
+                                        </div>
+                                        <a href="order.html" class="getOffer"> اطلب العرض </a>
+                                    </div>
+                                    <div class="offerData">
+                                        <h3> <i class="icofont-package"></i> زيارة تنظيف فردية بـ 120 ر.س (بدون ضريبة) </h3>
+                                        <p> <i class="icofont-ui-calendar"></i> <label> ينتهى  : </label> <span> 1/20/2021</span></p>
+                                        <p> <i class="icofont-id"></i> <label>   الجنسية : </label> <span>  الفلبين  </span> </p>
+                                        <p> <i class="icofont-price"></i> <label> السعر قبل الخصم : </label> <span class="oldPrice">  230 ريال  </span> </p>
+                                        <p> <i class="icofont-sale-discount"></i> <label> سعر الباقة بعد الخصم بالضريبة : </label> <b>  138 ريال  </b> </p>
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="offer nightOffer">
+                                    <div class="offerHead">
+                                        <div class="offerPrice"> 
+                                            <h2> 30ريال </h2> 
+                                            <h5> للساعة </h5>
+                                        </div>
+                                        <a href="order.html" class="getOffer"> اطلب العرض </a>
+                                    </div>
+                                    <div class="offerData">
+                                        <h3> <i class="icofont-package"></i> زيارة تنظيف فردية بـ 120 ر.س (بدون ضريبة) </h3>
+                                        <p> <i class="icofont-ui-calendar"></i> <label> ينتهى  : </label> <span> 1/20/2021</span></p>
+                                        <p> <i class="icofont-id"></i> <label>   الجنسية : </label> <span>  الفلبين  </span> </p>
+                                        <p> <i class="icofont-price"></i> <label> السعر قبل الخصم : </label> <span class="oldPrice">  230 ريال  </span> </p>
+                                        <p> <i class="icofont-sale-discount"></i> <label> سعر الباقة بعد الخصم بالضريبة : </label> <b>  138 ريال  </b> </p>
+                                    </div>
+                                </div>
+                            </div>           
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="offer">
+                                    <div class="offerHead">
+                                        <div class="offerPrice"> 
+                                            <h2> 30ريال </h2> 
+                                            <h5> للساعة </h5>
+                                        </div>
+                                        <a href="order.html" class="getOffer"> اطلب العرض </a>
+                                    </div>
+                                    <div class="offerData">
+                                        <h3> <i class="icofont-package"></i> زيارة تنظيف فردية بـ 120 ر.س (بدون ضريبة) </h3>
+                                        <p> <i class="icofont-ui-calendar"></i> <label> ينتهى  : </label> <span> 1/20/2021</span></p>
+                                        <p> <i class="icofont-id"></i> <label>   الجنسية : </label> <span>  الفلبين  </span> </p>
+                                        <p> <i class="icofont-price"></i> <label> السعر قبل الخصم : </label> <span class="oldPrice">  230 ريال  </span> </p>
+                                        <p> <i class="icofont-sale-discount"></i> <label> سعر الباقة بعد الخصم بالضريبة : </label> <b>  138 ريال  </b> </p>
+                                    </div>
+                                </div>
+                            </div>                         
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="offer nightOffer">
+                                    <div class="offerHead">
+                                        <div class="offerPrice"> 
+                                            <h2> 30ريال </h2> 
+                                            <h5> للساعة </h5>
+                                        </div>
+                                        <a href="order.html" class="getOffer"> اطلب العرض </a>
+                                    </div>
+                                    <div class="offerData">
+                                        <h3> <i class="icofont-package"></i> زيارة تنظيف فردية بـ 120 ر.س (بدون ضريبة) </h3>
+                                        <p> <i class="icofont-ui-calendar"></i> <label> ينتهى  : </label> <span> 1/20/2021</span></p>
+                                        <p> <i class="icofont-id"></i> <label>   الجنسية : </label> <span>  الفلبين  </span> </p>
+                                        <p> <i class="icofont-price"></i> <label> السعر قبل الخصم : </label> <span class="oldPrice">  230 ريال  </span> </p>
+                                        <p> <i class="icofont-sale-discount"></i> <label> سعر الباقة بعد الخصم بالضريبة : </label> <b>  138 ريال  </b> </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="offer">
+                                    <div class="offerHead">
+                                        <div class="offerPrice"> 
+                                            <h2> 30ريال </h2> 
+                                            <h5> للساعة </h5>
+                                        </div>
+                                        <a href="order.html" class="getOffer"> اطلب العرض </a>
+                                    </div>
+                                    <div class="offerData">
+                                        <h3> <i class="icofont-package"></i> زيارة تنظيف فردية بـ 120 ر.س (بدون ضريبة) </h3>
+                                        <p> <i class="icofont-ui-calendar"></i> <label> ينتهى  : </label> <span> 1/20/2021</span></p>
+                                        <p> <i class="icofont-id"></i> <label>   الجنسية : </label> <span>  الفلبين  </span> </p>
+                                        <p> <i class="icofont-price"></i> <label> السعر قبل الخصم : </label> <span class="oldPrice">  230 ريال  </span> </p>
+                                        <p> <i class="icofont-sale-discount"></i> <label> سعر الباقة بعد الخصم بالضريبة : </label> <b>  138 ريال  </b> </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="offer nightOffer">
+                                    <div class="offerHead">
+                                        <div class="offerPrice"> 
+                                            <h2> 30ريال </h2> 
+                                            <h5> للساعة </h5>
+                                        </div>
+                                        <a href="order.html" class="getOffer"> اطلب العرض </a>
+                                    </div>
+                                    <div class="offerData">
+                                        <h3> <i class="icofont-package"></i> زيارة تنظيف فردية بـ 120 ر.س (بدون ضريبة) </h3>
+                                        <p> <i class="icofont-ui-calendar"></i> <label> ينتهى  : </label> <span> 1/20/2021</span></p>
+                                        <p> <i class="icofont-id"></i> <label>   الجنسية : </label> <span>  الفلبين  </span> </p>
+                                        <p> <i class="icofont-price"></i> <label> السعر قبل الخصم : </label> <span class="oldPrice">  230 ريال  </span> </p>
+                                        <p> <i class="icofont-sale-discount"></i> <label> سعر الباقة بعد الخصم بالضريبة : </label> <b>  138 ريال  </b> </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="offer">
+                                    <div class="offerHead">
+                                        <div class="offerPrice"> 
+                                            <h2> 30ريال </h2> 
+                                            <h5> للساعة </h5>
+                                        </div>
+                                        <a href="order.html" class="getOffer"> اطلب العرض </a>
+                                    </div>
+                                    <div class="offerData">
+                                        <h3> <i class="icofont-package"></i> زيارة تنظيف فردية بـ 120 ر.س (بدون ضريبة) </h3>
+                                        <p> <i class="icofont-ui-calendar"></i> <label> ينتهى  : </label> <span> 1/20/2021</span></p>
+                                        <p> <i class="icofont-id"></i> <label>   الجنسية : </label> <span>  الفلبين  </span> </p>
+                                        <p> <i class="icofont-price"></i> <label> السعر قبل الخصم : </label> <span class="oldPrice">  230 ريال  </span> </p>
+                                        <p> <i class="icofont-sale-discount"></i> <label> سعر الباقة بعد الخصم بالضريبة : </label> <b>  138 ريال  </b> </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="offer nightOffer">
+                                    <div class="offerHead">
+                                        <div class="offerPrice"> 
+                                            <h2> 30ريال </h2> 
+                                            <h5> للساعة </h5>
+                                        </div>
+                                        <a href="order.html" class="getOffer"> اطلب العرض </a>
+                                    </div>
+                                    <div class="offerData">
+                                        <h3> <i class="icofont-package"></i> زيارة تنظيف فردية بـ 120 ر.س (بدون ضريبة) </h3>
+                                        <p> <i class="icofont-ui-calendar"></i> <label> ينتهى  : </label> <span> 1/20/2021</span></p>
+                                        <p> <i class="icofont-id"></i> <label>   الجنسية : </label> <span>  الفلبين  </span> </p>
+                                        <p> <i class="icofont-price"></i> <label> السعر قبل الخصم : </label> <span class="oldPrice">  230 ريال  </span> </p>
+                                        <p> <i class="icofont-sale-discount"></i> <label> سعر الباقة بعد الخصم بالضريبة : </label> <b>  138 ريال  </b> </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="offer">
+                                    <div class="offerHead">
+                                        <div class="offerPrice"> 
+                                            <h2> 30ريال </h2> 
+                                            <h5> للساعة </h5>
+                                        </div>
+                                        <a href="order.html" class="getOffer"> اطلب العرض </a>
+                                    </div>
+                                    <div class="offerData">
+                                        <h3> <i class="icofont-package"></i> زيارة تنظيف فردية بـ 120 ر.س (بدون ضريبة) </h3>
+                                        <p> <i class="icofont-ui-calendar"></i> <label> ينتهى  : </label> <span> 1/20/2021</span></p>
+                                        <p> <i class="icofont-id"></i> <label>   الجنسية : </label> <span>  الفلبين  </span> </p>
+                                        <p> <i class="icofont-price"></i> <label> السعر قبل الخصم : </label> <span class="oldPrice">  230 ريال  </span> </p>
+                                        <p> <i class="icofont-sale-discount"></i> <label> سعر الباقة بعد الخصم بالضريبة : </label> <b>  138 ريال  </b> </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="tabContent" id="tab2"> 
-                            <div class="offers">
-                                <div class="row">
-                                    <div class="col-12 col-md-6">
-                                        <div class="offer nightOffer">
-                                            <div class="offerHead">
-                                                <div class="offerPrice"> 
-                                                    <h2> 30ريال </h2> 
-                                                    <h5> للساعة </h5>
-                                                </div>
-                                                <a href="order.html" class="getOffer"> اطلب العرض </a>
-                                            </div>
-                                            <div class="offerData">
-                                                <h3> <i class="icofont-package"></i> زيارة تنظيف فردية بـ 120 ر.س (بدون ضريبة) </h3>
-                                                <p> <i class="icofont-ui-calendar"></i> <label> ينتهى  : </label> <span> 1/20/2021</span></p>
-                                                <p> <i class="icofont-id"></i> <label>   الجنسية : </label> <span>  الفلبين  </span> </p>
-                                                <p> <i class="icofont-price"></i> <label> السعر قبل الخصم : </label> <span class="oldPrice">  230 ريال  </span> </p>
-                                                <p> <i class="icofont-sale-discount"></i> <label> سعر الباقة بعد الخصم بالضريبة : </label> <b>  138 ريال  </b> </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <div class="offer nightOffer">
-                                            <div class="offerHead">
-                                                <div class="offerPrice"> 
-                                                    <h2> 30ريال </h2> 
-                                                    <h5> للساعة </h5>
-                                                </div>
-                                                <a href="order.html" class="getOffer"> اطلب العرض </a>
-                                            </div>
-                                            <div class="offerData">
-                                                <h3> <i class="icofont-package"></i> زيارة تنظيف فردية بـ 120 ر.س (بدون ضريبة) </h3>
-                                                <p> <i class="icofont-ui-calendar"></i> <label> ينتهى  : </label> <span> 1/20/2021</span></p>
-                                                <p> <i class="icofont-id"></i> <label>   الجنسية : </label> <span>  الفلبين  </span> </p>
-                                                <p> <i class="icofont-price"></i> <label> السعر قبل الخصم : </label> <span class="oldPrice">  230 ريال  </span> </p>
-                                                <p> <i class="icofont-sale-discount"></i> <label> سعر الباقة بعد الخصم بالضريبة : </label> <b>  138 ريال  </b> </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <div class="offer nightOffer">
-                                            <div class="offerHead">
-                                                <div class="offerPrice"> 
-                                                    <h2> 30ريال </h2> 
-                                                    <h5> للساعة </h5>
-                                                </div>
-                                                <a href="order.html" class="getOffer"> اطلب العرض </a>
-                                            </div>
-                                            <div class="offerData">
-                                                <h3> <i class="icofont-package"></i> زيارة تنظيف فردية بـ 120 ر.س (بدون ضريبة) </h3>
-                                                <p> <i class="icofont-ui-calendar"></i> <label> ينتهى  : </label> <span> 1/20/2021</span></p>
-                                                <p> <i class="icofont-id"></i> <label>   الجنسية : </label> <span>  الفلبين  </span> </p>
-                                                <p> <i class="icofont-price"></i> <label> السعر قبل الخصم : </label> <span class="oldPrice">  230 ريال  </span> </p>
-                                                <p> <i class="icofont-sale-discount"></i> <label> سعر الباقة بعد الخصم بالضريبة : </label> <b>  138 ريال  </b> </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <div class="offer nightOffer">
-                                            <div class="offerHead">
-                                                <div class="offerPrice"> 
-                                                    <h2> 30ريال </h2> 
-                                                    <h5> للساعة </h5>
-                                                </div>
-                                                <a href="order.html" class="getOffer"> اطلب العرض </a>
-                                            </div>
-                                            <div class="offerData">
-                                                <h3> <i class="icofont-package"></i> زيارة تنظيف فردية بـ 120 ر.س (بدون ضريبة) </h3>
-                                                <p> <i class="icofont-ui-calendar"></i> <label> ينتهى  : </label> <span> 1/20/2021</span></p>
-                                                <p> <i class="icofont-id"></i> <label>   الجنسية : </label> <span>  الفلبين  </span> </p>
-                                                <p> <i class="icofont-price"></i> <label> السعر قبل الخصم : </label> <span class="oldPrice">  230 ريال  </span> </p>
-                                                <p> <i class="icofont-sale-discount"></i> <label> سعر الباقة بعد الخصم بالضريبة : </label> <b>  138 ريال  </b> </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    </div>
+                    <div class="createPackage">
+                        <a href="#" class="mainBtn"> <span> صمم باقتك بنفسك </span> </a>
                     </div>
                 </div>
             </div>
@@ -355,8 +484,52 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="plugins/owlCarousel/owl.carousel.min.js"></script>
+    <script src="plugins/noUiSlider/nouislider.js"></script>
     <script src="plugins/animation/aos.js"></script>
     <script src="js/custom.js"></script>
+
+    <script>
+        (function() {        
+            let slider = document.getElementById('priceRange'),
+                min = parseInt(slider.dataset.min),
+                max = parseInt(slider.dataset.max),
+                step = parseInt(slider.dataset.step),
+                start = parseInt(slider.dataset.start),
+                end = parseInt(slider.dataset.end),
+                direction = "rtl" ;
+
+            // Check website Language
+            $('body').hasClass('en') ? direction = "ltr" : direction = "rtl" ;
+
+            console.log('min:' , min );
+            console.log('max:' , max);
+            console.log('start:' , start );
+            console.log('end:' , end );
+            // Create Range Slider
+            noUiSlider.create(slider, {
+                start: [start, end],
+                direction: direction ,
+                connect: true,
+                step: 10,
+                tooltips: [true, true],
+                range: {
+                    'min': min ,
+                    'max': max
+                },
+            
+                format: {
+                    to: value => value,
+                    from: value => value
+                }
+            });
+
+            slider.noUiSlider.on('update', function(values, handle) {
+                $('.range_min').text(min);
+                $('.range_max').text(max);
+            });
+
+        })();
+    </script>
 
 </body>
 </html>

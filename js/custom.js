@@ -321,15 +321,15 @@
     });
 
     // Tabs 
-    $('.tabsList a').on('click' , function(e){
-        e.preventDefault();
-        $('.tabsList a').removeClass('active');
-        $(this).addClass('active');
+    // $('.tabsList a').on('click' , function(e){
+    //     e.preventDefault();
+    //     $('.tabsList a').removeClass('active');
+    //     $(this).addClass('active');
         
-        var itemId = $(this).attr("href"); 
-        $('.tabContent').removeClass('show'); 
-        $(itemId).addClass('show');
-    });
+    //     var itemId = $(this).attr("href"); 
+    //     $('.tabContent').removeClass('show'); 
+    //     $(itemId).addClass('show');
+    // });
 
     // Choose Address
     $('.address input').change(function(){ 

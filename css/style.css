@@ -11,6 +11,7 @@
 
 /* fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
 
 :root {
     --white: #fff;
@@ -40,7 +41,7 @@
 
 /**** Init ****/
 body {
-    font-family: 'Tajawal', sans-serif;
+    font-family: 'Tajawal', 'Poppins' , sans-serif;
     overflow-x: hidden;
     direction: rtl;
     text-align: right;
@@ -796,6 +797,18 @@ ul.newsticker_rtl a {
 @media (min-width: 1500px) {
     .container {
         max-width: 1300px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .offersPage .container {
+        max-width: 1400px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .offersPage .container {
+        max-width: 1700px;
     }
 }
 
@@ -1633,69 +1646,111 @@ footer h3::before {
 }
 
 .FastContact a {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     color: var(--white);
     font-size: 23px;
-    border: 4px solid var(--white);
 }
 
 .FastContact a:first-of-type {
-    margin-inline-end: 10px;
+    margin-inline-end: 15px;
+    animation: pulse 1.5s infinite;
 }
 
-.FastContact .whatsapp:hover {
-    -webkit-animation: ripple 0.7s linear infinite;
-    animation: ripple 0.7s linear infinite;
+.FastContact a:last-of-type {
+    animation: pulseRed 1.5s infinite;
 }
 
-.FastContact .call:hover {
-    -webkit-animation: callRipple 0.7s linear infinite;
-    animation: callRipple 0.7s linear infinite;
+.FastContact a:hover {
+    background: var(--yellow);
+    animation: pulseYellow 1.5s infinite;
 }
 
-@-webkit-keyframes ripple {
+@keyframes pulse {
     0% {
-        box-shadow: 0 0 0 0 rgba(101, 255, 120, 0.3);
+        -webkit-box-shadow: 0 0 0 0 var(--whatsapp);
+    }
+
+    70% {
+        -webkit-box-shadow: 0 0 0 8px transparent
     }
 
     100% {
-        box-shadow: 0 0 0 10px rgba(101, 255, 120, 0.3);
+        -webkit-box-shadow: 0 0 0 0 transparent
     }
 }
 
-@keyframes ripple {
+@-webkit-keyframes pulse {
     0% {
-        box-shadow: 0 0 0 0 rgba(101, 255, 120, 0.3);
+        -webkit-box-shadow: 0 0 0 0 var(--whatsapp);
+    }
+
+    70% {
+        -webkit-box-shadow: 0 0 0 8px transparent
     }
 
     100% {
-        box-shadow: 0 0 0 10px rgba(101, 255, 120, 0.3);
+        -webkit-box-shadow: 0 0 0 0 transparent
     }
 }
 
-@-webkit-keyframes callRipple {
+@keyframes pulseRed {
     0% {
-        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.3);
+        -webkit-box-shadow: 0 0 0 0 var(--youtube);
+    }
+
+    70% {
+        -webkit-box-shadow: 0 0 0 8px transparent
     }
 
     100% {
-        box-shadow: 0 0 0 10px rgba(255, 0, 0, 0.3);
+        -webkit-box-shadow: 0 0 0 0 transparent
     }
 }
 
-
-@keyframes callRipple {
+@-webkit-keyframes pulseRed {
     0% {
-        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.3);
+        -webkit-box-shadow: 0 0 0 0 var(--youtube);
+    }
+
+    70% {
+        -webkit-box-shadow: 0 0 0 8px transparent
     }
 
     100% {
-        box-shadow: 0 0 0 10px rgba(255, 0, 0, 0.3);
+        -webkit-box-shadow: 0 0 0 0 transparent
+    }
+}
+
+@keyframes pulseYellow {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 var(--yellow);
+    }
+
+    70% {
+        -webkit-box-shadow: 0 0 0 8px transparent
+    }
+
+    100% {
+        -webkit-box-shadow: 0 0 0 0 transparent
+    }
+}
+
+@-webkit-keyframes pulseYellow {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 var(--yellow);
+    }
+
+    70% {
+        -webkit-box-shadow: 0 0 0 8px transparent
+    }
+
+    100% {
+        -webkit-box-shadow: 0 0 0 0 transparent
     }
 }
 
@@ -1733,7 +1788,6 @@ footer h3::before {
         right: 10px;
     }
 }
-
 
 /*==========================||---------------------------||========================*/
 /*==========================||        Counts             ||========================*/
@@ -3144,6 +3198,12 @@ footer h3::before {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.address.selected {
+    border-color: var(--secondaryColor);
+    background: var(--secondaryColor);
 }
 
 .address .checkBox {
@@ -3166,6 +3226,7 @@ footer h3::before {
     height: 40px;
     background: var(--white);
     border-width: 3px;
+    border-radius: 10px;
     margin: 0;
 }
 
@@ -3182,10 +3243,13 @@ footer h3::before {
 }
 
 .addressBody li {
-    min-width: 50%;
+    min-width: 33.33%;
     line-height: 30px;
-    margin-bottom: 5px;
     color: var(--text);
+}
+
+.address.selected li {
+    color: var(--white);
 }
 
 .addressBody label {
@@ -3194,25 +3258,35 @@ footer h3::before {
     color: var(--textDark);
 }
 
+.address.selected li label {
+    color: var(--white);
+}
+
+.addressFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .address .darkBtn {
-    width: 100px;
-    font-size: 14px;
+    width: auto;
+    min-width: 60px;
+    font-size: 13px;
     height: 40px;
-    margin-bottom: 10px;
+    margin-inline-end: 10px;
+    padding: 0 10px;
+    border-radius: 10px;
 }
 
 .address .darkBtn:nth-child(2) {
     margin: 0;
 }
 
-.address.selected {
-    border-color: var(--secondaryColor);
-}
-
 .blueBtn {
     margin-inline-start: auto;
     font-size: 14px;
     background: var(--mainColor);
+    border-radius: 10px;
 }
 
 .filter {
@@ -3482,6 +3556,7 @@ footer h3::before {
     font-size: 14px;
     width: 130px;
     margin-inline-end: 20px;
+    border-radius: 10px;
 }
 
 .contractWrapper {
@@ -4403,46 +4478,6 @@ footer h3::before {
     padding: 20px 0 0 0;
 }
 
-.tabsList {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 30px;
-}
-
-.tabsList a {
-    width: calc(50% - 5px);
-    height: 45px;
-    background: var(--grey);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 15px;
-    font-size: 17px;
-    font-weight: 600;
-    color: var(--text);
-    border: var(--border);
-}
-
-.tabsList .active {
-    color: var(--white);
-    background: var(--secondaryColor);
-    border-color: var(--secondaryColor);
-}
-
-.tabsList a i {
-    font-size: 20px;
-    margin-inline-start: 10px;
-}
-
-.tabContent {
-    display: none;
-}
-
-.tabContent.show {
-    display: block;
-}
-
 .visitsWrapper .col-12 {
     margin-bottom: 30px;
 }
@@ -4509,10 +4544,79 @@ footer h3::before {
 }
 
 .offerWrapper {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
     border-radius: 25px;
+}
+
+.packagesFilter {
+    margin-bottom: 20px;
+    border-radius: 25px;
+}
+
+.radioField {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+}
+
+.packagesFilter .field>label {
+    margin-bottom: 10px;
+}
+
+.packagesFilter .radioBox {
+    margin: 0;
+}
+
+.packagesFilter .radioBox label::before {
+    border-color: var(--text);
+}
+
+.packagesFilter .radioBox input:checked+label {
+    color: var(--secondaryColor);
+}
+
+.packagesFilter .mainBtn {
+    font-size: 14px;
+    border-radius: 25px;
+}
+
+.rangeslider {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50px;
+    width: 100%;
+    padding-top: 18px;
+}
+
+.rangeslider p {
+    font-weight: 600;
+}
+
+.packagesFilter .field > label {
+    color: var(--textDark);
+}
+
+.rangeValues {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.offerWrapper .offers {
+    max-height: 630px;
+    width: 100%;
+    margin-inline-end: -14px;
+    padding-inline-end: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.createPackage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0 0 0;
 }
 
 .offer {
@@ -4539,12 +4643,11 @@ footer h3::before {
     justify-content: center;
     border: var(--border);
     border-color: var(--white);
-    border-width: 3px;
     position: relative;
     z-index: 1;
     background: var(--white);
     border-radius: 0 25px;
-    padding: 5px 20px;
+    padding: 7px 20px;
     width: fit-content;
     margin: 0;
     background: var(--google);
@@ -4561,7 +4664,6 @@ footer h3::before {
 }
 
 .offerPrice h2 {
-    font-size: 27px;
     font-weight: 700;
     margin: 0;
     font-size: 20px;
@@ -4578,7 +4680,7 @@ footer h3::before {
 }
 
 .offer h3 {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 600;
     line-height: 28px;
 }
@@ -4646,6 +4748,10 @@ footer h3::before {
     background: var(--mainColor);
     border-color: var(--mainColor);
     color: var(--white);
+}
+
+.createPackage .mainBtn {
+    border-radius: 25px;
 }
 
 @media screen and (max-width:768px) {
@@ -4752,16 +4858,6 @@ footer h3::before {
         margin: 0 3px;
     }
 
-    .tabsList a {
-        font-size: 13px;
-        padding: 0 5px;
-    }
-
-    .tabsList a i {
-        font-size: 13px;
-        margin-inline-start: 5px;
-    }
-
     .visitsWrapper .col-12 {
         margin-bottom: 15px;
     }
@@ -4782,6 +4878,52 @@ footer h3::before {
     .visit p {
         font-size: 14px;
         line-height: 25px;
+    }
+
+    .offer {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    
+    .offerPrice {
+        height: 30px;
+    }
+    
+    .offerPrice h2 {
+        font-size: 13px;
+    }
+    
+    .offerPrice h5 {
+        font-size: 11px;
+    }
+    
+    .getOffer {
+        font-size: 12px;
+        width: fit-content;
+        height: 30px;
+    }
+    
+    .offer h3 {
+        font-size: 14px;
+        line-height: 25px;
+    }
+    
+    .offer i {
+        font-size: 18px;
+        margin-inline-start: 5px;
+    }
+    
+    .offerData {
+        padding: 12px;
+    }
+    
+    .offer p {
+        line-height: 30px;
+        margin: 0;
+    }
+    
+    .offer b {
+        font-size: 16px;
     }
 }
 
@@ -4939,7 +5081,7 @@ footer h3::before {
     .en .FastContact {
         right: 5px;
     }
-    
+
     .en .scrollTop {
         left: 10px;
     }
@@ -4958,11 +5100,11 @@ footer h3::before {
     .en .navBtn {
         margin-inline-end: auto;
     }
-    
+
     .en .language {
         margin-inline-end: 20px;
     }
-    
+
     .en .navMenu {
         right: 0;
         left: auto;
