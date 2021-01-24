@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!--  CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/icofont.min.css">
+    <link rel="stylesheet" href="plugins/owlCarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="plugins/animation/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="images/xIcon.png" type="image/x-icon" />
+    <title> إفادة للموارد البشرية </title>
+</head>
+
+<body>
+
+    <!-- Header  -->
+    <header>
+        <div class="container-fluid">
+            <!-- Header Navbar  -->
+            <div class="headerNav"> 
+                <!-- Logo  -->
+                <a class="logo" href="index.html">  <img src="images/logo.png" alt="logo" class="img-fluid"> </a>
+                <!-- Nav Menu  -->
+                <div class="navMenu"> 
+                    <ul>
+                        <li> <a href="index.html"> الرئيسية </a></li>
+                        <li class="dropDown"> 
+                            <a href="#">  عن الشركة  </a>
+                            <div class="dropList">
+                                <a href="about.html"> من نحن </a>
+                                <a href="news.html"> الاخبار </a>
+                                <a href="branches.html"> فروعنا </a>
+                                <a href="contact.html"> اتصل بنا </a>
+                            </div>
+                        </li>
+                        <li class="dropDown"> 
+                            <a href="#"> قطاع الافراد </a>
+                            <div class="dropList">
+                                <a href="service.html"> خدماتنا </a>
+                                <a href="#"> خدماتنا </a>
+                                <a href="#"> خدماتنا </a>
+                            </div>
+                        </li>
+                        <li> <a href="offers.html"> قطاع الشركات </a></li>
+                        <li> <a href="offers.html"> عروضنا  </a></li>
+                        <li> <a href="branches.html"> فروعنا </a></li>
+                        <li class="active"> <a href="faq.html"> الاسئلة الشائعة </a></li>
+                        <li> <a href="contact.html"> اتصل بنا </a> </li>
+                    </ul>
+                </div>
+                <!-- User and Language -->
+                <div class="icons">
+                    <!-- User  -->
+                    <div class="user">
+                        <!-- Before Login  -->
+                        <div class="userHead"> <a href="login.html"> <i class="icofont-user-alt-5"></i> <span> تسجيل الدخول  </span> </a> </div>
+                        <!-- After Login  -->
+                        <!-- <div class="dropDown"> 
+                            <div class="userHead">  <a href="javascript:void(0)"> <i class="icofont-user-alt-5"></i> <span> حسام هلال  </span>  </a> <i class="icofont-thin-down"></i></div>
+                            <div class="dropList">
+                                <a href="dashboard.html"> <i class="icofont-dashboard"></i> لوحة المعلومات </a>
+                                <a href="profile.html"> <i class="icofont-user"></i>  حسابى </a>
+                                <a href="hours-contract.html"> <i class="icofont-attachment"></i> تعاقدات الساعات </a>
+                                <a href="individual-contract.html"> <i class="icofont-list"></i>  عقود الافراد </a>
+                                <a href="individual-orders.html"> <i class="icofont-paperclip"></i> طلبات الافراد </a>
+                                <a href="visits.html"> <i class="icofont-car-alt-1"></i>  زياراتى </a>
+                                <a href="orders.html"> <i class="icofont-document-folder"></i> طلباتى </a>
+                                <a href="support.html"> <i class="icofont-live-support"></i> الدعم الفنى </a>
+                                <a href="index.html"> <i class="icofont-logout"></i> تسجيل الخروج </a>
+                            </div>
+                        </div> -->
+                    </div>
+                    <!-- Language  -->
+                    <div class="language">
+                        <a href="#"> <i class="icofont-globe"></i>  EN </a>
+                        <!-- <a href="#"> <i class="icofont-globe"></i> عربي </a> -->
+                    </div>
+                    <!-- icons For Mobile -->
+                    <div class="mobileIcons">
+                        <div class="navBtn"> <span></span> <span></span> <span></span>  </div>
+                        <div class="menuOverlay"></div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </header>
+
+    
+    <div class="PlayBox secPadding">
+
+        <!-- Click Loader  -->
+        <!-- Add class "loadingBtn" to any Button to start animation when Click  -->
+        <button class="mainBtn loadingBtn"> <span> Click To Start Loading </span> </button>
+
+
+    </div>
+
+    <!-- Loader When Click  -->
+    <!-- To start Loading when click Button It will add Class "load" To Loader    -->
+    <!-- To remove Loading Remove class "load" From  loader  -->
+    <div class="loading">
+        <div class="spinner"></div>
+    </div>
+
+    
+
+
+    <!-- JS -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="plugins/owlCarousel/owl.carousel.min.js"></script>
+    <script src="plugins/animation/aos.js"></script>
+    <script src="js/custom.js"></script>
+
+    <!-- Script to start Loading  -->
+    <script type="text/javascript">
+        // (function($) {
+            $(document).ready(function(){    
+                $('.loadingBtn').on('click' , function(){
+                    $('.loading').addClass('load');
+                    setTimeout(function(){
+                        $('.loading').removeClass('load');
+                    },5000);
+                });
+            });
+        // });
+    </script>
+
+</body>
+</html>

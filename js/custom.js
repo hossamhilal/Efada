@@ -2,10 +2,14 @@
 (function($) {
     "use strict"; 
 
-    // Marque 
-    // $(window).on('load', function(){
-    //     $('body').hasClass('en') ? $('marquee').attr('direction','left') : $('marquee').attr('direction','right');
-    // });
+    // Loader
+    $(window).on('load', function(){
+        $('body').addClass('stopScroll');
+        $('.loader').fadeOut(500, function () {
+            $(this).remove();
+            $('body').removeClass('stopScroll');
+        }); 
+    });
 
     // Open navbarSide Menu 
     $('.navBtn').on('click', function () {
@@ -212,9 +216,10 @@
     prevBtn.click(function(){
         var currentStep = $(this).closest('.stepContent'),
             currentStepBtn = currentStep.attr('id'),
-            prevStepWizard = $('.step[href="#' + currentStepBtn + '"]').prev();
+            prevStepWizard = $('.step[href="#' + currentStepBtn + '"]').prev(),
+            nextStepWizard = $('.step[href="#' + currentStepBtn + '"]').next();
 
-        prevStepWizard.removeClass('disabled').addClass('active').trigger('click');
+        prevStepWizard.removeClass('disabled finished').addClass('active').trigger('click');
         nextStepWizard.next('.step').removeClass('finished');
     });
 

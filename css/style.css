@@ -52,6 +52,7 @@ body {
 
 .stopScroll {
     overflow: hidden;
+    height: 100vh;
 }
 
 .secPadding {
@@ -2639,7 +2640,7 @@ footer h3::before {
 }
 
 /*==========================||---------------------------||========================*/
-/*==========================||            En             ||========================*/
+/*==========================||          Branches         ||========================*/
 /*==========================||---------------------------||========================*/
 
 .branch {
@@ -3048,7 +3049,7 @@ footer h3::before {
 }
 
 /*==========================||---------------------------||========================*/
-/*==========================||            En             ||========================*/
+/*==========================||        Order Page         ||========================*/
 /*==========================||---------------------------||========================*/
 
 .sm-header {
@@ -3096,7 +3097,7 @@ footer h3::before {
     position: absolute;
     top: 50px;
     left: 50px;
-    width: 1000px;
+    width: 2000px;
     height: 4px;
     background: var(--secondaryColor);
 }
@@ -3449,6 +3450,7 @@ footer h3::before {
     height: 20px;
     z-index: 1;
     opacity: 0;
+    cursor: pointer;
 }
 
 .checkBox label {
@@ -3845,6 +3847,168 @@ footer h3::before {
 .success .mainBtn {
     font-size: 15px;
     margin: 30px auto 0;
+    border-radius: 25px;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.days .day {
+    min-width: 33.33%;
+}
+
+.field .day label {
+    font-weight: 500;
+}
+
+.day input:checked+label {
+    color: var(--secondaryColor);
+}
+
+.agree label {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.agree input:checked+label {
+    color: var(--textDark);
+}
+
+.agree a {
+    color: var(--secondaryColor);
+    margin: 0 5px;
+}
+
+.visitsTable {
+    border: var(--border);
+    border-radius: 10px;
+}
+
+.visitDay {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: var(--border);
+}
+
+.visitDay:last-of-type {
+    border: 0;
+}
+
+.visitHead {
+    background: var(--yellow);
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    color: var(--mainColor);
+    font-size: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline-end: 15px;
+}
+
+.visitDay p {
+    font-size: 19px;
+}
+
+.visitDay label {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.visitDay span {
+    background: var(--mainColor);
+    color: var(--white);
+    padding: 0 10px;
+    border-radius: 15px;
+    margin-inline-start: auto;
+    font-size: 13px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contractPackage li {
+    color: var(--textDark);
+    position: relative;
+}
+
+.contractPackage span {
+    margin-inline-start: 5px;
+    color: var(--secondaryColor);
+    font-weight: 500;
+}
+
+.contractPackage li::before {
+    content: '';
+    border-top: 5px solid transparent;
+    border-right: 6px solid var(--secondaryColor);
+    border-bottom: 5px solid transparent;
+    display: inline-block;
+    margin-inline-end: 5px;
+}
+
+.ckeckModal h2 {
+    background: var(--secondaryColor);
+    color: var(--white);
+    padding: 10px 15px;
+    text-align: center;
+    margin: 0;
+}
+
+.infoModal .modal-content {
+    border: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.infoModal .checkModalBody {
+    padding: 20px 5%;
+}
+
+.infoModal .quest {
+    margin-bottom: 20px;
+}
+
+.infoModal .quest h3 {
+    font-size: 17px;
+    line-height: 26px;
+    margin-bottom: 10px;
+}
+
+.infoModal .radios {
+    display: flex;
+    align-items: center;
+}
+
+.infoModal .radioBox {
+    width: 50%;
+    color: var(--text);
+}
+
+.infoModal .radioBox input:checked + label {
+    color: var(--secondaryColor);
+}
+
+.infoModal .radioBox label::after {
+    top: 3px;
+}
+
+.infoModal .radioBox label::before {
+    border-color: var(--text);
+}
+
+.infoModal .mainBtn {
+    border-radius: 25px;
+    font-size: 15px;
+    width: 160px;
+    margin: 20px auto;
 }
 
 @media screen and (max-width:575px) {
@@ -4014,6 +4178,19 @@ footer h3::before {
 @media (min-width:1024px) {
     .modal-dialog {
         max-width: 900px;
+    }
+
+    .infoModal .modal-dialog {
+        max-width: 550px;
+    }
+
+    .contractPackage ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .contractPackage li {
+        width: 50%;
     }
 }
 
@@ -5076,20 +5253,19 @@ footer h3::before {
     }
 }
 
-
 @media screen and (max-width:768px) {
     .errorBox>span.four {
         width: 85px;
         height: 20px;
     }
-    
+
     .errorBox>span.four:before {
         width: 20px;
         height: 120px;
         left: 50px;
         bottom: -50px;
     }
-    
+
     .errorBox>span.four:after {
         width: 92px;
         height: 20px;
@@ -5097,38 +5273,140 @@ footer h3::before {
         left: -11px;
         bottom: 27px;
     }
-    
+
     .errorBox>span.zero {
         width: 80px;
         height: 80px;
     }
-    
+
     .errorBox>span.zero:before {
         width: 80px;
         height: 80px;
     }
-    
+
     .errorBox>span.zero:after {
         width: 40px;
         height: 40px;
         left: 20px;
         bottom: 20px;
-    }    
+    }
 
     .errorBox {
         height: 340px;
         margin: 0;
     }
-    
+
     .backToHome p {
         font-size: 17px;
         margin-bottom: 20px;
     }
-    
+
     .backToHome .mainBtn {
         height: 40px;
         font-size: 13px;
     }
+}
+
+/*==========================||---------------------------||========================*/
+/*==========================||            Loader        ||========================*/
+/*==========================||---------------------------||========================*/
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: var(--purple);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.loaderBox {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.loaderBox div {
+    position: absolute;
+    border: 4px solid var(--white);
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.loaderBox div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+    0% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+
+    100% {
+        top: 0px;
+        left: 0px;
+        width: 72px;
+        height: 72px;
+        opacity: 0;
+    }
+}
+
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+}
+
+.loading.load {
+    opacity: 1;
+    visibility: visible;
+}
+
+.loading .spinner {
+    border: 4px solid var(--white); 
+    border-top: 4px solid var(--secondaryColor);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.PlayBox {
+    text-align: center;
+    padding: 150px 0;
+}
+
+.PlayBox .mainBtn {
+    margin: auto;
+    font-size: 15px;
+    border-radius: 25px;
 }
 
 /*==========================||---------------------------||========================*/

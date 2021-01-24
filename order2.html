@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!--  CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/jqueryUi/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/icofont.min.css">
+    <link rel="stylesheet" href="plugins/owlCarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="plugins/animation/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="images/xIcon.png" type="image/x-icon" />
+    <title> إفادة للموارد البشرية </title>
+</head>
+
+<body>
+
+    <!-- Loader   -->
+    <div class="loader">
+        <div class="loaderBox"> <div></div> <div></div> </div>
+    </div>
+
+    <!-- Header  -->
+    <header>
+        <div class="container-fluid">
+            <!-- Header Navbar  -->
+            <div class="headerNav"> 
+                <!-- Logo  -->
+                <a class="logo" href="index.html">  <img src="images/logo.png" alt="logo" class="img-fluid"> </a>
+                <!-- Nav Menu  -->
+                <div class="navMenu"> 
+                    <ul>
+                        <li> <a href="index.html"> الرئيسية </a></li>
+                        <li class="dropDown"> 
+                            <a href="#">  عن الشركة  </a>
+                            <div class="dropList">
+                                <a href="about.html"> من نحن </a>
+                                <a href="news.html"> الاخبار </a>
+                                <a href="branches.html"> فروعنا </a>
+                                <a href="contact.html"> اتصل بنا </a>
+                            </div>
+                        </li>
+                        <li class="dropDown"> 
+                            <a href="#"> قطاع الافراد </a>
+                            <div class="dropList">
+                                <a href="service.html"> خدماتنا </a>
+                                <a href="#"> خدماتنا </a>
+                                <a href="#"> خدماتنا </a>
+                            </div>
+                        </li>
+                        <li> <a href="offers.html"> قطاع الشركات </a></li>
+                        <li> <a href="offers.html"> عروضنا  </a></li>
+                        <li> <a href="branches.html"> فروعنا </a></li>
+                        <li> <a href="faq.html"> الاسئلة الشائعة </a></li>
+                        <li> <a href="contact.html"> اتصل بنا </a> </li>
+                    </ul>
+                </div>
+                <!-- User and Language -->
+                <div class="icons">
+                    <!-- User  -->
+                    <div class="user">
+                        <!-- Before Login  -->
+                        <div class="userHead"> <a href="login.html"> <i class="icofont-user-alt-5"></i> <span> تسجيل الدخول  </span> </a> </div>
+                        <!-- After Login  -->
+                        <!-- <div class="dropDown"> 
+                            <div class="userHead">  <a href="javascript:void(0)"> <i class="icofont-user-alt-5"></i> <span> حسام هلال  </span>  </a> <i class="icofont-thin-down"></i></div>
+                            <div class="dropList">
+                                <a href="dashboard.html"> <i class="icofont-dashboard"></i> لوحة المعلومات </a>
+                                <a href="profile.html"> <i class="icofont-user"></i>  حسابى </a>
+                                <a href="hours-contract.html"> <i class="icofont-attachment"></i> تعاقدات الساعات </a>
+                                <a href="individual-contract.html"> <i class="icofont-list"></i>  عقود الافراد </a>
+                                <a href="individual-orders.html"> <i class="icofont-paperclip"></i> طلبات الافراد </a>
+                                <a href="visits.html"> <i class="icofont-car-alt-1"></i>  زياراتى </a>
+                                <a href="orders.html"> <i class="icofont-document-folder"></i> طلباتى </a>
+                                <a href="support.html"> <i class="icofont-live-support"></i> الدعم الفنى </a>
+                                <a href="index.html"> <i class="icofont-logout"></i> تسجيل الخروج </a>
+                            </div>
+                        </div> -->
+                    </div>
+                    <!-- Language  -->
+                    <div class="language">
+                        <a href="#"> <i class="icofont-globe"></i>  EN </a>
+                        <!-- <a href="#"> <i class="icofont-globe"></i> عربي </a> -->
+                    </div>
+                    <!-- icons For Mobile -->
+                    <div class="mobileIcons">
+                        <div class="navBtn"> <span></span> <span></span> <span></span>  </div>
+                        <div class="menuOverlay"></div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </header>
+
+    <!-- Page Header  -->
+    <div class="pageHeader secPadding sm-header">
+        <div class="container">
+            <h1> طلب خدمة </h1>
+            <div class="bradCrumbBox"> 
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"> <a href="index.html"> الرئيسية </a> </li>
+                    <li class="breadcrumb-item active" aria-current="page"> طلب خدمة </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Service   -->
+    <div class="orderPage secPadding">
+        <div class="container">
+            <!-- Wizard  -->
+            <div class="wizard">
+                <!-- Wizard Steps  -->
+                <div class="steps">
+                    <a href="#step1" class="step active">
+                        <div class="stepIcon">  <img src="images/step-1.png" alt="icon" class="img-fluid"></div>    
+                        <h3> العنوان </h3>
+                    </a>
+                    <a href="#step2" class="step disabled"> 
+                        <div class="stepIcon">  <img src="images/step-2.png" alt="icon" class="img-fluid"></div>    
+                        <h3> بيانات التعاقد </h3>
+                    </a>
+                    <a href="#step3" class="step disabled"> 
+                        <div class="stepIcon">  <img src="images/step-3.png" alt="icon" class="img-fluid"></div>    
+                        <h3> جدول الزيارات المتوقعة </h3>
+                    </a>
+                    <a href="#step4" class="step disabled">
+                        <div class="stepIcon">  <img src="images/step-4.png" alt="icon" class="img-fluid"></div>    
+                        <h3> تفاصيل العقد  </h3>
+                    </a>
+                    <a href="#step5" class="step disabled">
+                        <div class="stepIcon">  <img src="images/step-7.jpg" alt="icon" class="img-fluid"></div>    
+                        <h3> الدفع</h3>
+                    </a>
+                </div> 
+                <!-- Steps Content  -->
+                <div class="stepsContent">
+                    <form action="">
+                        <!-- step One  -->
+                        <div class="stepContent show" id="step1"> 
+                            <h2 class="sectitle"> تحديد الموقع والعنوان </h2>
+                            <div class="formBox">
+                                <div class="addresses">
+                                    <div class="address">
+                                        <div class="checkBox">
+                                            <input type="checkbox" name="address">
+                                            <label></label>
+                                        </div>
+                                        <div class="addressBody">
+                                            <ul>
+                                                <li> <label> المدينة :  </label> <span> الرياض </span> </li>
+                                                <li> <label> نوع السكن: </label> <span> منزل </span> </li>
+                                                <li> <label> الحي : </label> <span> المروج </span> </li>
+                                                <li> <label> رقم الشقة :  </label> <span> 15 </span> </li>
+                                                <li> <label> رقم الطابق: </label> <span> 3 </span> </li>
+                                                <li> <label> رقم المنزل: </label> <span> 123 </span> </li>
+                                            </ul>
+                                        </div>
+                                        <div class="addressFooter">
+                                            <a href="#" class="mainBtn darkBtn">  <span> الخريطة </span> </a>
+                                            <div class="deleteAddress mainBtn darkBtn"> <span> حذف </span> </div>
+                                        </div>
+                                    </div>
+                                    <div class="addNewAddressBtn mainBtn blueBtn"> <span> إضافة عنوان جديد </span> </div>
+                                </div>
+                                <div class="addAddress">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6">
+                                            <div class="inputField selectField"> 
+                                                <select class="input customSelect">
+                                                    <option selected> المدينة </option>
+                                                    <option value="0">المدينة </option>
+                                                    <option value="1">المدينة</option>
+                                                    <option value="2">المدينة</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="inputField selectField"> 
+                                                <select class="input customSelect">
+                                                    <option selected> الحي </option>
+                                                    <option value="0">الحي </option>
+                                                    <option value="1">الحي</option>
+                                                    <option value="2">الحي</option>
+                                                </select>
+                                            </div>                                        
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="inputField"> 
+                                                <input class="input" id="address" type="text" placeholder="العنوان كاملا" readonly> 
+                                            </div>                                        
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="map" id="map">
+                                                <iframe width="100%" height="100%" src="https://maps.google.com/maps?width=100%&amp;height=400&amp;hl=en&amp;coord=24.7136, 46.6753&amp;q=Riydah+(Riydah)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/draw-radius-circle-map/">Create radius map</a></iframe>
+                                            </div> 
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="inputField selectField"> 
+                                                <select class="input customSelect">
+                                                    <option selected> نوع السكن </option>
+                                                    <option value="0"> فيلا </option>
+                                                    <option value="1">عمارة</option>
+                                                </select>
+                                            </div>                                          
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="inputField selectField"> 
+                                                <select class="input customSelect">
+                                                    <option selected> رقم الطابق </option>
+                                                    <option value="0"> ارضى </option>
+                                                    <option value="1"> 1 </option>
+                                                    <option value="1"> 2 </option>
+                                                    <option value="1"> 3 </option>
+                                                </select>
+                                            </div>                                          
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="inputField"> 
+                                                <input class="input" type="text" placeholder="رقم المنزل"> 
+                                            </div>                                          
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="inputField"> 
+                                                <input class="input" type="text" placeholder="معلم او مكان قريب من العنوان"> 
+                                            </div>                                          
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="button" class="backToAdresses mainBtn blueBtn"> <span> اضافة </span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stepBtns"> 
+                                <button class="mainBtn nextStep" type="button"> <span> التالي </span>  </button> 
+                            </div>
+                        </div>
+                        <!-- Step Two  -->
+                        <div class="stepContent" id="step2"> 
+                            <h2 class="sectitle"> بيانات التعاقد </h2>
+                            <div class="formBox"> 
+                                <div class="row">
+                                    <div class="col-12 col-sm-6">
+                                        <div class="field">
+                                            <label> تاريخ أول زيارة </label>
+                                            <div class="inputField"> 
+                                                <input class="input" type="text" id="datepicker"> 
+                                            </div>
+                                        </div>    
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <div class="field">
+                                            <label> الأيام المتاحة </label>
+                                            <div class="days">
+                                                <div class="checkBox day">
+                                                    <input type="checkbox">
+                                                    <label> السبت </label>
+                                                </div>
+                                                <div class="checkBox day">
+                                                    <input type="checkbox">
+                                                    <label> الاحد  </label>
+                                                </div>
+                                                <div class="checkBox day">
+                                                    <input type="checkbox">
+                                                    <label> الاثنين </label>
+                                                </div>
+                                                <div class="checkBox day">
+                                                    <input type="checkbox">
+                                                    <label> الثلاثاء </label>
+                                                </div>
+                                                <div class="checkBox day">
+                                                    <input type="checkbox">
+                                                    <label> الاربعاء </label>
+                                                </div>
+                                                <div class="checkBox day">
+                                                    <input type="checkbox">
+                                                    <label> الخميس </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="agree">
+                                    <div class="checkBox">
+                                        <input type="checkbox">
+                                        <label> أوافق على <a href="#"> الشروط والاحكام </a> </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stepBtns"> 
+                                <button class="mainBtn prevStep" type="button"> <span> السابق </span>  </button> 
+                                <button class="mainBtn nextStep" type="button"> <span> التالي </span>  </button> 
+                            </div>
+                        </div>
+                        <!-- Step Three  -->
+                        <div class="stepContent" id="step3"> 
+                            <h2 class="sectitle"> جدول الزيارات المتوقعة </h2>
+                            <div class="formBox"> 
+                                <div class="row justify-content-center">
+                                    <div class="col-12 col-sm-4">
+                                        <div class="visitsTable">
+                                            <div class="visitDay">
+                                                <div class="visitHead"> 27 </div>
+                                                <div class="visitBody">
+                                                    <label>  الأربعاء  </label>
+                                                    <p> 27-01-2021  </p>
+                                                </div>
+                                                <span> صباحا </span>
+                                            </div>
+                                            <div class="visitDay">
+                                                <div class="visitHead"> 31 </div>
+                                                <div class="visitBody">
+                                                    <label> الأحد </label>   
+                                                    <p>   31-01-2021 </p>
+                                                </div>
+                                                <span> صباحا </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                       
+                            </div>
+                            <div class="stepBtns"> 
+                                <button class="mainBtn prevStep" type="button"> <span> السابق </span>  </button> 
+                                <button class="mainBtn nextStep" type="button"> <span> التالي </span>  </button> 
+                            </div>
+                        </div>
+                        <!-- Step Four  -->
+                        <div class="stepContent" id="step4"> 
+                            <h2 class="sectitle"> تفاصيل العقد  </h2>
+                            <div class="formBox"> 
+                                <div class="row">
+                                    <div class="col-12 col-sm-6">
+                                        <div class="stepPackage contractPackage">
+                                            <h4>  تفاصيل العقد  </h4>
+                                            <ul>
+                                                <li>  عدد العاملات :   <span> 1 عاملة </span> </li>
+                                                <li>  مدة التعاقد:   <span> 1 عاملة </span> </li>
+                                                <li>  عدد الزيارات:   <span>  2 زيارة </span>  </li>
+                                                <li>  عدد الزيارات الأسبوعية:   <span>  2 زيارة </span> </li>
+                                                <li>  الايام المختارة :   <span> الأحد, الأربعاء </span> </li>
+                                                <li>  تاريخ أول زيارة :  <span> 2021-01-27 </span> </li>
+                                                <li>  الجنسية  :  <span>  الفلبين </span> </li>
+                                                <li>  عدد الساعات : <span> 4ساعة </span> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <div class="stepPackage contractPackage">
+                                            <h4> تفاصيل الباقة</h4>
+                                            <ul>
+                                                <li>  الباقة :   <span> 1 سنة </span> </li>
+                                                <li>  مدة التعاقد:  <span> 360 يوم  </span> </li>
+                                                <li>  تاريخ الطلب:   <span> 02/01/2021 </span>  </li>
+                                                <li>  سعر الباقة :   <span> 28800  ر.س  </span> </li>
+                                                <li>  قيمة الضريبة :   <span> 4320 ر.س  </span> </li>
+                                                <li>  الإجمالي بعد الضريبة :  <span> 33120  ر.س </span> </li>
+                                                <li>  سند أمر :  <span> 28800 ر.س  </span>  </li>
+                                                <li>  رسوم توصيل : <span> 80.00 ر.س </span>  </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stepBtns"> 
+                                <button class="mainBtn prevStep" type="button"> <span> السابق </span>  </button> 
+                                <button class="mainBtn" type="button" data-toggle="modal" data-target="#infoModal"> <span> التالي </span>  </button> 
+                            </div>
+                        </div>
+                        <!-- Step Five  -->
+                        <div class="stepContent" id="step5"> 
+                            <h2 class="sectitle"> الدفع والتمتع بخدماتنا </h2>
+                            <div class="formBox"> 
+                                <div class="success">
+                                    <img src="images/success.png" alt="success" class="img-fluid">
+                                    <h4> شكرا لك </h4>
+                                    <h2> تم تسجيل التعاقد بنجاح </h2>
+                                    <h3> رقم العقد <b> HS0107061 </b> </h3>
+                                    <h3> قيمة العقد <span> 138 </span> ريال </h3>
+                                    <a href="" class="mainBtn">  <span>  إدفع أونلاين </span> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SHare  -->
+    <div class="share">
+        <a class="facebook" href="#"> <i class="icofont-facebook"></i> </a>
+        <a class="twitter" href="#"> <i class="icofont-twitter"></i> </a>
+        <a class="linkedin" href="#"> <i class="icofont-linkedin"></i> </a>
+        <a class="whatsapp" href="#"> <i class="icofont-whatsapp"></i> </a>
+        <a class="google" href="#"> <i class="icofont-google-plus"></i> </a>
+        <a class="instagram" href="#"> <i class="icofont-instagram"></i> </a>
+        <a class="pinterest" href="#"> <i class="icofont-pinterest"></i> </a>
+        <a class="android" href="#"> <i class="icofont-brand-android-robot"></i> </a>
+        <a class="apple" href="#"> <i class="icofont-brand-apple"></i> </a>
+    </div>
+
+    <!-- Footer  -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <!-- logo and Details -->
+                <div class="col-12 col-sm-4" data-aos="fade-up-in">
+                    <div class="footerInfo">
+                        <a class="footerLogo" href="index.html">  <img src="images/logoWhite.png" alt="logo" class="img-fluid"> </a>
+                        <p> لاشك أن مشوار الألف ميل يبدأ بخطوة واحدة ...... نحن في شركة أفادة للموارد البشرية بعون الله تعالي قد بدأنا هذا المشوار ، ووضعنا نصب أعيننا رؤية مستقبلية واضحه وهي تقديم خدمة راقية المرحلة القادمة ورؤية 2030. </p>
+                    </div>
+                </div>
+                <!-- Links  -->
+                <div class="col-12 col-sm-4" data-aos="fade-up-in">
+                    <div class="footerBlock">
+                        <h3> اهم الروابط </h3>
+                        <ul>
+                            <li> <a href="index.html"> الرئيسية </a></li>
+                            <li> <a href="about.html"> من نحن </a></li>
+                            <li> <a href="news.html"> الاخبار </a></li>
+                            <li> <a href="#"> خدماتنا </a> </li>
+                            <li> <a href="offers.html"> عروضنا المميزة </a></li>
+                            <li> <a href="news.html"> الاخبار </a></li>
+                            <li> <a href="branches.html"> فروعنا </a></li>
+                            <li> <a href="faq.html"> الاسئلة الشائعة </a></li>
+                            <li> <a href="contact.html"> اتصل بنا </a></li>
+                            <li> <a href="about.html"> من نحن </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Social  -->
+                <div class="col-12 col-sm-4" data-aos="fade-up-in">
+                    <div class="footerBlock">
+                        <h3> تابعنا على  </h3>
+                        <div class="social">
+                            <a href="#"> <i class="icofont-facebook"></i> </a>
+                            <a href="#"> <i class="icofont-twitter"></i> </a>
+                            <a href="#"> <i class="icofont-linkedin"></i> </a>
+                            <a href="#"> <i class="icofont-whatsapp"></i> </a>
+                            <a href="#"> <i class="icofont-google-plus"></i> </a>
+                            <a href="#"> <i class="icofont-instagram"></i> </a>
+                            <a href="#"> <i class="icofont-behance"></i> </a>
+                            <a href="#"> <i class="icofont-pinterest"></i> </a>
+                        </div>
+                    </div>
+                    <div class="footerBlock">
+                        <h3> تابعنا على  </h3>
+                        <div class="footerApp">
+                            <a href="#"> <i class="icofont-brand-android-robot"></i> </a>
+                            <a href="#"> <i class="icofont-brand-apple"></i> </a>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </footer> 
+
+    <!-- Modal -->
+    <div class="modal fade infoModal" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="ckeckModal">
+                    <h2> استبيان </h2>
+                    <div class="checkModalBody">
+                        <div class="quest">
+                            <h3> هل يوجد في المنزل أي شخص مصاب أو لدية إشتباه إصابة بفايروس كوفيد-19 ؟ </h3>
+                            <div class="radios">
+                                <div class="radioBox">
+                                    <input type="radio" name="quest1">
+                                    <label> نعم </label>
+                                </div>
+                                <div class="radioBox">
+                                    <input type="radio" name="quest1">
+                                    <label> لا </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quest">
+                            <h3> هل يوجد كبار في السن فوق ال 65 سنة في المنزل ؟ أو شخص مصاب بأمراض تنفسية أو أمراض مزمنة ؟ </h3>
+                            <div class="radios">
+                                <div class="radioBox">
+                                    <input type="radio" name="quest2">
+                                    <label> نعم </label>
+                                </div>
+                                <div class="radioBox">
+                                    <input type="radio" name="quest2">
+                                    <label> لا </label>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="mainBtn goToLastStep" data-dismiss="modal" aria-label="Close"> <span>  استمرار </span></a>
+                    </div>        
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <p> © 2020. إساد لحلول و إدارة الموارد البشرية </p>
+        </div>
+    </div>
+    
+    <!-- Scroll To Top  -->
+    <div class="scrollTop"> <i class="icofont-bubble-up"></i> </div>
+
+    <!-- Fast Contact  -->
+    <div class="FastContact">
+        <a href="https://api.whatsapp.com/send?phone=+966549782553" class="whatsapp"> <i class="icofont-brand-whatsapp"></i> </a>
+        <a href="tel:+966549782553" class="call"> <i class="icofont-ui-call"></i> </a>
+    </div>
+
+    <!-- JS -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="plugins/jqueryUi/jquery-ui.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="plugins/owlCarousel/owl.carousel.min.js"></script>
+    <script src="plugins/animation/aos.js"></script>
+    <script src="js/custom.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){    
+            $('#datepicker').datepicker();
+
+            $('.goToLastStep').on('click' , function(){
+                var currentStep = $('.stepsContent').find('.stepContent.show'),
+                    currentStepBtn = currentStep.attr('id'),
+                    nextStepWizard = $('.step[href="#' + currentStepBtn + '"]').next();
+
+                nextStepWizard.removeClass('disabled').addClass('active').trigger('click');
+                nextStepWizard.prev('.step').addClass('finished');
+            });
+        });
+    </script>
+
+</body>
+</html>
