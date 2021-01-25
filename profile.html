@@ -169,12 +169,13 @@
                                         <div class="field">
                                             <label> المدينة</label>
                                             <div class="inputField selectField"> 
-                                                <select class="input customSelect">
-                                                    <option selected> المدينة </option>
-                                                    <option value="0">المدينة </option>
-                                                    <option value="1">المدينة</option>
-                                                    <option value="2">المدينة</option>
-                                                </select>
+                                                <input list="city" class="input" placeholder="المدينة">
+                                                <datalist id="city">
+                                                    <option value="مكة"></option>
+                                                    <option value="جدة"></option>
+                                                    <option value="الرياض"></option>
+                                                    <option value="المدينة"></option>
+                                                </datalist>
                                             </div>
                                         </div>
                                     </div>
@@ -182,25 +183,26 @@
                                         <div class="field">
                                             <label>  الجنسية </label>
                                             <div class="inputField selectField"> 
-                                                <select class="input customSelect">
-                                                    <option selected> مصر </option>
-                                                    <option value="0">المدينة </option>
-                                                    <option value="1">المدينة</option>
-                                                    <option value="2">المدينة</option>
-                                                </select>
+                                                <input list="nationality" class="input" placeholder="الجنسية">
+                                                <datalist id="nationality">
+                                                    <option value="اندونيسيا">  </option>
+                                                    <option value="ماليزيا"> </option>
+                                                    <option value="غانا"></option>
+                                                    <option value="الهند"></option>
+                                                </datalist>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-6"> 
                                         <div class="field">
                                             <label>  المنطقة </label>
-                                            <div class="inputField selectField"> 
-                                                <select class="input customSelect">
-                                                    <option selected> المنطقة </option>
-                                                    <option value="0">المنطقة </option>
-                                                    <option value="1">المنطقة</option>
-                                                    <option value="2">المنطقة</option>
-                                                </select>
+                                            <div class="inputField selectField">
+                                                <input list="nationality" class="input" placeholder="المنطقة">
+                                                <datalist class="input customSelect">
+                                                    <option value="المنطقة"></option>
+                                                    <option value="المنطقة"></option>
+                                                    <option value="المنطقة"></option>
+                                                </datalist>
                                             </div>
                                         </div>
                                     </div>

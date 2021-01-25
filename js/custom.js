@@ -341,8 +341,14 @@
         if ( this.checked )  {
             $('.address').removeClass('selected');
             $(this).parents('.address').addClass('selected');
+            $('.addNewAddressBtn').hide();
+            $('.addresses').parents('.stepContent').find('.stepBtns .mainBtn').removeClass('d-none');
         }
-        else $(this).parents('.address').removeClass('selected');
+        else {
+            $(this).parents('.address').removeClass('selected'); 
+            $('.addNewAddressBtn').show();
+            $('.addresses').parents('.stepContent').find('.stepBtns .mainBtn').addClass('d-none');
+        }
     });
 
     // Add New Address 
